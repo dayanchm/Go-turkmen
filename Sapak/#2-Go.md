@@ -143,19 +143,127 @@ Go dilinde 2 dürli san görnüşi bar. Bulary <strong> arhitektura garaşsyz g�
 
 <strong> arhitektura garaşsyz görnüşi </strong>
 
-``
-uint8  işaretsiz 8-bit  tamsayı (0–255)
-uint16 işaretsiz 16-bit tamsayı (0–65535)
-uint32 işaretsiz 32-bit tamsayı (0–4294967295)
-uint64 işaretsiz 64-bit tamsayı (0–18446744073709551615)
-int8   işaretli  8-bit  tamsayı (-128–127)
-int16  işaretli  16-bit tamsayı (-32768–32767)
-int32  işaretli  32-bit tamsayı (-2147483648–2147483647)
-int64  işaretli  64-bit tamsayı (-9223372036854775808–9223372036854775807)
-float32 IEEE-754 Standartı 32-bit ondalıklı sayı (+- 1O-45 -> +- 3.4 * 1038 )
-float64 IEEE-754 Standartı 64-bit ondalıklı sayı (+- 5 * 10–324 -> 1.7 * 10308 )
+```
+uint8  8-bit  (0–255)
+
+uint16 16-bit (0–65535)
+
+uint32 32-bit (0–4294967295)
+
+uint64 64-bit (0–18446744073709551615)
+
+int8   8-bit  (-128–127)
+
+int16  16-bit (-32768–32767)
+
+int32  32-bit  (-2147483648–2147483647)
+
+int64  64-bit  (-9223372036854775808–9223372036854775807)
+
+float32 IEEE-754  32-bit (+- 1O-45 -> +- 3.4 * 1038 )
+
+float64 IEEE-754  64-bit  (+- 5 * 10–324 -> 1.7 * 10308 )
+
 complex64 
+
 complex128 
+
 byte ~~ uint8
+
 rune ~~ int32
-``
+```
+
+<strong> arhitekturasyna baglylykda </strong>
+
+
+```
+uint    -> 32 ya da 64 bit
+int     -> uint bilen deňdir
+uintptr -> görkeziji bahasynyň düşündirilmedik bitlerini saklamak üçin ýeterlik uly bolmadyk gol
+```
+
+Arhitektura bagly görnüşler haýsy ulgam üçin düzülendigine baglylykda ululykda üýtgeýär.
+
+Esasanam binagärlik taýdan garaşsyz görnüşleri ulanmakda, dogry görnüşi saýlamak amaly ýerine ýetirişine täsir eder. Mysal üçin, diňe 0 bilen 200 aralygyndaky sanlary ulanjak bolsak, üýtgeýjimizi uint ýerine derek uint8 diýip kesgitlemek dogry.
+
+Bu ýerde üns bermeli ýene bir nokadymyz, maglumat görnüşiniň ululygy kodumyzyň akymyndan ýokary bolmaly däldir.
+
+Mysal 1: 
+
+```
+package main
+import (
+ “fmt”
+)
+func main() {
+ var t uint8 = 254
+ fmt.Println(t + 1)
+}
+```
+
+Print:
+
+`
+255
+`
+
+Mysal 2:
+```
+package main
+import (
+ “fmt”
+)
+func main() {
+ var t uint8 = 254
+ fmt.Println(t + 2)
+}
+```
+Print:
+
+`
+0
+`
+
+Mysal 3:
+```
+package main
+import (
+ “fmt”
+)
+func main() {
+ var t uint8 = 254 + 2
+ fmt.Println(t)
+}
+```
+
+Print:
+`
+./prog.go:8:20: constant 256 overflows uint8
+`
+
+<strong> Boolean </strong>
+Boolean maglumat görnüşi (data type) dogry ýa-da ýalnyş 2 dürli bahany alyp biler. Bellenen bahasy ýalňyş. Kod akymynyň içinde dolandyryş mehanizmleri üçin peýdalydyr.
+
+```
+package main
+import (
+ “fmt”
+)
+func main() {
+ var isActive bool
+ printed := true
+ fmt.Println(isActive)
+ fmt.Println(printed)
+}
+```
+
+Print:
+
+```
+Output:
+false
+true
+
+```
+
+
