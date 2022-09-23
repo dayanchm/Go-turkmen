@@ -1,4 +1,4 @@
-# Golang-sapaklary
+# <div align="center">Golang-sapaklary</div>
 
 
 - [Go Programmirleme dili-Esaslary](Sapak/%231-Go.md)
