@@ -47,3 +47,53 @@ t := 10
 ```
 t := int64(10)
 ```
+
+- Üýtgeýjini kesgitläniňde bir baha bellenmese, üýtgeýjä nol baha berilýär (nol baha diýilýär).
+
+  - San maglumat görnüşleri üçin: 0
+  - Boolean maglumat görnüşi üçin: false
+  - Setir (string) maglumat görnüşi üçin: “” (boş string)
+
+Üýtgeýän baha üçin käbir dilleriň kesgitlenmedik gymmaty bar. Şeýle-de bolsa, Go-da kesgitlenmedik baha ýok. Mysal üçin, “Bool” maglumat görnüşi üçin “Go” -yň alyp biljek hakyky ýa-da ýalan 2 bahasy bar.
+
+
+```
+package main
+
+import “fmt”
+
+func main() {
+
+ var name string
+ 
+ fmt.Printf(“var name %T = %+v\n”, name, name)
+ 
+ var payment float64
+ 
+ fmt.Printf(“var payment %T = %q\n”, payment, payment)
+ 
+var isActive bool
+
+ fmt.Printf(“var isActive %T = %+v\n”, isActive, isActive)
+}
+
+```
+
+Print:
+
+```
+var name string = “”
+var payment float64 = 0
+var isActive bool = false
+```
+
+- Variabla atlary
+
+Go programmirleme dilinde başga dillerde bar bolan "private, public, protected" açar sözleri ýokdyr. Bu ýagdaýy has ýönekeý usul bilen çözdüler.
+
+<string>
+Üýtgeýjiniň ady baş harp bilen başlasa, bu üýtgeýjä kesgitlenen bukjanyň daşyndan girip bolýar. Şeýle-de bolsa, baş harp bilen başlasa, diňe kesgitlenen paketde elýeterlidir.
+</string>
+
+
+
