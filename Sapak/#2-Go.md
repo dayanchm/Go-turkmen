@@ -95,3 +95,29 @@ Go programmirleme dilinde başga dillerde bar bolan "private, public, protected"
 
 - Şonuň üçin üýtgeýän atlaryň baş harplara degişlidigini aýdyp bileris.
 
+
+```
+var FirstName string
+var password string
+```
+
+   Üýtgeýjä(variable) at berlende göz öňünde tutulmaly beýleki nokatlar:
+
+- Diňe harplar, sanlar we aşaky çyzyklar bilen edilmeli.
+
+```
+Dogry -> user_name, userName, signal4
+Yalňyş -> best.offer, user-name
+```
+- Sanlar bilen başlamaly däldir.
+
+```
+Dogry -> best4Game, house62
+Yalňyş -> 10cars
+```
+- Nyşan ulanylmaly däldir.
+```
+Dogry -> product
+Yalňyş -> $product
+```
+
