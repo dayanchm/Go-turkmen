@@ -136,4 +136,4 @@ fmt.Println(b)
 Google
 true
 `
-
+<strong>San görnüşleri(Numeric Types)</strong>
