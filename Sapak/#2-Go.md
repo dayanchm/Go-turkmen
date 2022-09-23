@@ -87,13 +87,11 @@ var payment float64 = 0
 var isActive bool = false
 ```
 
-- Variabla atlary
+- Variable atlary
 
 Go programmirleme dilinde başga dillerde bar bolan "private, public, protected" açar sözleri ýokdyr. Bu ýagdaýy has ýönekeý usul bilen çözdüler.
 
-<string>
-Üýtgeýjiniň ady baş harp bilen başlasa, bu üýtgeýjä kesgitlenen bukjanyň daşyndan girip bolýar. Şeýle-de bolsa, baş harp bilen başlasa, diňe kesgitlenen paketde elýeterlidir.
-</string>
+<strong> Üýtgeýjiniň ady baş harp bilen başlasa, bu üýtgeýjä kesgitlenen bukjanyň daşyndan girip bolýar. Şeýle-de bolsa, baş harp bilen başlasa, diňe kesgitlenen paketde elýeterlidir.</strong>
 
-
+- Şonuň üçin üýtgeýän atlaryň baş harplara degişlidigini aýdyp bileris.
 
