@@ -44,3 +44,6 @@ Lokal üýtgeýji hökmünde ulanylýar. Diňe ilki kesgitlenen ýerinde hereket
 t := 10
 ```
 - Kesgitleme wagtynda bir görnüşi görkezmek islenýän bolsa, üýtgeýjini gaplamak arkaly döredip bolýar.
+```
+t := int64(10)
+```
