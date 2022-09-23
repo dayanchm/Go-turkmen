@@ -120,4 +120,20 @@ Yalňyş -> 10cars
 Dogry -> product
 Yalňyş -> $product
 ```
+<strong>Multiple Assignment</strong>
+
+- Go bilen dürli maglumatlar görnüşleriniň bahalaryny bir setirde birden köp üýtgeýjä bellemek bolýar. Esasanam kod okamak mümkinçiligi taýdan köp amatlylygy üpjün edýän aýratynlyk.
+```
+a,b,c := 12, true, “Google”
+fmt.Println(a)
+fmt.Println(c)
+fmt.Println(b)
+```
+<strong>Print</strong> 
+
+`
+12
+Google
+true
+`
 
