@@ -137,3 +137,25 @@ Google
 true
 `
 <strong>San görnüşleri(Numeric Types)</strong>
+
+Go dilinde 2 dürli san görnüşi bar. Bulary <strong> arhitektura garaşsyz görnüşi </strong> hökmünde dogry ölçegi alýan görnüşlere we programmanyň döredilen <strong> arhitekturasyna baglylykda </strong> ululygyny alýan görnüşlere (implementation specific type) bölmek bolar.
+
+
+<strong> arhitektura garaşsyz görnüşi </strong>
+
+``
+uint8  işaretsiz 8-bit  tamsayı (0–255)
+uint16 işaretsiz 16-bit tamsayı (0–65535)
+uint32 işaretsiz 32-bit tamsayı (0–4294967295)
+uint64 işaretsiz 64-bit tamsayı (0–18446744073709551615)
+int8   işaretli  8-bit  tamsayı (-128–127)
+int16  işaretli  16-bit tamsayı (-32768–32767)
+int32  işaretli  32-bit tamsayı (-2147483648–2147483647)
+int64  işaretli  64-bit tamsayı (-9223372036854775808–9223372036854775807)
+float32 IEEE-754 Standartı 32-bit ondalıklı sayı (+- 1O-45 -> +- 3.4 * 1038 )
+float64 IEEE-754 Standartı 64-bit ondalıklı sayı (+- 5 * 10–324 -> 1.7 * 10308 )
+complex64 
+complex128 
+byte ~~ uint8
+rune ~~ int32
+``
