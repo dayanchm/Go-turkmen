@@ -443,3 +443,40 @@ Metin is 0
 Feyyaz is 2
 Ali is 1
 ```
+
+
+<strong>Konsol çykyşyny döretmek </strong>
+
+Konsolyň netijelerini döretmek üçin deslapky koddaky fmt paketini ulanyp bileris. Fmt bukjasyny import edenimizden soň, paketdäki Çap, Printf we Println funksiýalary bilen netijeleri döredip bileris. Mundan başga-da, netijeler Errorf, Fprint, Fprintf, Fprintln, Sprint, Sprintf, Sprintln funksiýalary bilen döredilip bilner.
+
+
+Mysal:
+
+```
+package main
+
+import “fmt”
+
+func main() {
+ fmt.Println(“Salam, Men go ulanjysy”)
+ fmt.Printf(“Salam %s men \n”, “go ulanjysy”)
+}
+```
+
+Print:
+
+```
+Salam, Men go ulanjysy.
+Salam, go ulanjysy men.
+```
+
+<strong>Işlikler</strong>
+
+Print çap etmek funksiýalary işlikleri ulanyp biler. Bu işlikler dürli formatlaşdyrma stillerini emele getirýärler. Işlikler köplenç% ýa-da \ nyşan bilen ulanylýar.
+
+
+<strong>Käbir işlikler:</strong>
+
+```
+
+```
