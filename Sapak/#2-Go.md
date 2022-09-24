@@ -273,4 +273,18 @@ true
 
 ```
 
+<strong>String</strong>
 
+String data type görnüşleri yzygiderli bir ýa-da birnäçe simboldan durýar.
+
+Go-daky string aňlatmalary goşa dyrnak (“) ýa-da ýeke-täk dyrnak (backtick) ( ` ) arasynda ýazyp bolýar.
+
+
+```
+a := “İr bilen \”Salam\” diýdi”
+b := `İr bilen “Salam” diýdi`
+```
+
+<strong> UTF-8 </strong>
+
+Go dilinde UTF-8 bilen bile geler. Aýry bir paket ýa-da kitaphana gerek bolmaz.
