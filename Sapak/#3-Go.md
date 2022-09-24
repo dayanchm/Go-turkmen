@@ -25,4 +25,33 @@ import {
 $GOPATH/src/foo/bar
 ```
 
-Bu paketi aşakdaky ýaly kodda import edýäris
+Bu paketi aşakdaky ýaly kodda import edýäris.
+
+```
+import “foo/bar”
+```
+Bar paketini GitHub-da foo atly ammarda import etjek bolsak, ony aşakdaky ýaly import edip bileris:
+github.com/nailcankucuk/foo/bar import ediň.
+
+```
+package main
+
+import “github.com/nailcankucuk/foo/bar”
+
+func main() {
+ bar.sayHello()
+}
+```
+
+<strong>(Executable) Paketler</strong>
+
+- Executable programs must have a source code that is packaged as main and contains the main() function. The main() function can be defined once, takes no parameters, and has no return type. Our application first starts running from this main function.
+
+
+```
+package main
+
+func main() {
+ fmt.Println(“Naber?”)
+}
+```
