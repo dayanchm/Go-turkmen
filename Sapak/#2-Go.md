@@ -139,6 +139,7 @@ fmt.Println(b)
 Google
 true
 `
+
 <strong>San görnüşleri(Numeric Types)</strong>
 
 Go dilinde 2 dürli san görnüşi bar. Bulary <strong> arhitektura garaşsyz görnüşi </strong> hökmünde dogry ölçegi alýan görnüşlere we programmanyň döredilen <strong> arhitekturasyna baglylykda </strong> ululygyny alýan görnüşlere (implementation specific type) bölmek bolar.
