@@ -345,7 +345,7 @@ U+65E5 ‘日’ starts at byte position 0
 U+672C ‘本’ starts at byte position 3
 U+8A9E ‘語’ starts at byte position 6
 ```
-Constants (Dowamly)
+<strong>Constants (Dowamly)</strong>
 
 Constants üýtgeýän görnüşler bolup, kesgitleme wagtynda bellenen başlangyç bahanyň soň üýtgemegine ýol bermeýär.
 
@@ -359,3 +359,50 @@ func main() {
  fmt.Println(gopher)
 }
 ```
+Print:
+
+```
+Nail
+```
+
+<strong> Bir constants kesgitlemek isleseňiz, onda size kodyňyz çalyşmaz </strong>
+
+Mysal:
+```
+package main
+
+import “fmt”
+
+func main() {
+ const gopher = “Nail”
+ fmt.Println(gopher)
+ gopher = “Can”
+ fmt.Println(gopher)
+}
+```
+Print:
+
+```
+./prog.go:10:9: cannot assign to gopher
+```
+<strong> Typed & Untyped Constants </strong>
+
+```
+import “fmt”
+
+const (
+ year = 365 // untyped
+ leapYear = int32(366) // typed
+)
+
+func main() {
+ hours := 24
+ minutes := int32(60)
+ fmt.Println(hours * year) 
+ fmt.Println(minutes * year)
+ fmt.Println(minutes * leapYear)
+}
+
+```
+
+ 
