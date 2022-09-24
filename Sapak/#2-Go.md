@@ -323,3 +323,39 @@ length of ‘Hello, 世界’: 13
 
 
 Görşümiz ýaly, a üýtgeýjiniň (variable) uzynlygy a üýtgeýjisindäki (variable) nyşanlaryň sanyndan köp. Munuň sebäbi Go dilinde aýratyn görnüş bolan <strong> rune </strong> görnüşi. <strong> Rune </strong> nyşanlarynyň ýunikod bahasyny öz içine alýan we 1-2 int32 görnüşli bahalardan ybarat ýörite görnüş.
+
+
+Aşakdaky mysal <strong> rune </strong> bahasy bilen gözden geçirilip bilner.
+
+```
+package main
+import “fmt”
+func main() {
+ const nihongo = “日本語”
+ for index, runeValue := range nihongo {
+ fmt.Printf(“%#U starts at byte position %d\n”, runeValue, index)
+ }
+}
+```
+
+Print
+
+```
+U+65E5 ‘日’ starts at byte position 0
+U+672C ‘本’ starts at byte position 3
+U+8A9E ‘語’ starts at byte position 6
+```
+Constants (Dowamly)
+
+Constants üýtgeýän görnüşler bolup, kesgitleme wagtynda bellenen başlangyç bahanyň soň üýtgemegine ýol bermeýär.
+
+```
+package main
+
+import “fmt”
+
+func main() {
+ const gopher = “Nail”
+ fmt.Println(gopher)
+}
+```
