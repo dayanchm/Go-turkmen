@@ -387,6 +387,8 @@ Print:
 ```
 <strong> Typed & Untyped Constants </strong>
 
+Mysal:
+
 ```
 import “fmt”
 
@@ -405,4 +407,39 @@ func main() {
 
 ```
 
- 
+Print:
+
+```
+8760
+21900
+21960
+```
+<strong>Iota</strong>
+
+Bu sanlaryň köpelmegi bilen yzygiderliligi kesgitlemekde ulanylýan görnüş. Kesgitleme tertibine görä köpelip bahalary belleýär. Kesgitlenen blokda 0-dan başlaýar we 1-e köpelmek bilen dowam edýär.
+
+
+```
+package main
+
+import “fmt”
+
+const (
+ Metin int = iota
+ Ali
+ Feyyaz
+)
+
+func main() {
+ fmt.Printf(“Metin is %v\n”, Metin)
+ fmt.Printf(“Feyyaz is %v\n”, Feyyaz)
+ fmt.Printf(“Ali is %v\n”, Ali)
+}
+```
+Print:
+
+```
+Metin is 0
+Feyyaz is 2
+Ali is 1
+```
