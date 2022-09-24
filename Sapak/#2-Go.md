@@ -225,6 +225,7 @@ Print:
 `
 
 Mysal 3:
+
 ```
 package main
 import (
@@ -237,11 +238,13 @@ func main() {
 ```
 
 Print:
+
 `
 ./prog.go:8:20: constant 256 overflows uint8
 `
 
 <strong> Boolean </strong>
+
 Boolean maglumat görnüşi (data type) dogry ýa-da ýalnyş 2 dürli bahany alyp biler. Bellenen bahasy ýalňyş. Kod akymynyň içinde dolandyryş mehanizmleri üçin peýdalydyr.
 
 ```
