@@ -288,3 +288,38 @@ b := `İr bilen “Salam” diýdi`
 <strong> UTF-8 </strong>
 
 Go dilinde UTF-8 bilen bile geler. Aýry bir paket ýa-da kitaphana gerek bolmaz.
+
+
+Mysal :
+
+```
+package main
+import (
+ “fmt”
+)
+func main() {
+ a := “Hello, 世界”
+ for i, c := range a {
+  fmt.Printf(“%d: %s\n”, i, string(c))
+ }
+ fmt.Println(“length of ‘Hello, 世界’: “, len(a))
+}
+```
+
+Print:
+
+```
+0: H
+1: e
+2: l
+3: l
+4: o
+5: ,
+6:
+7: 世
+10: 界
+length of ‘Hello, 世界’: 13
+```
+
+
+Görşümiz ýaly, a üýtgeýjiniň (variable) uzynlygy a üýtgeýjisindäki (variable) nyşanlaryň sanyndan köp. Munuň sebäbi Go dilinde aýratyn görnüş bolan <strong> rune </strong> görnüşi. <strong> Rune </strong> nyşanlarynyň ýunikod bahasyny öz içine alýan we 1-2 int32 görnüşli bahalardan ybarat ýörite görnüş.
