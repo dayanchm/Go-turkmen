@@ -44,6 +44,7 @@ Lokal üýtgeýji hökmünde ulanylýar. Diňe ilki kesgitlenen ýerinde hereket
 t := 10
 ```
 - Kesgitleme wagtynda bir görnüşi görkezmek islenýän bolsa, üýtgeýjini gaplamak arkaly döredip bolýar.
+
 ```
 t := int64(10)
 ```
@@ -116,6 +117,7 @@ Dogry -> best4Game, house62
 Yalňyş -> 10cars
 ```
 - Nyşan ulanylmaly däldir.
+
 ```
 Dogry -> product
 Yalňyş -> $product
@@ -123,6 +125,7 @@ Yalňyş -> $product
 <strong>Multiple Assignment</strong>
 
 - Go bilen dürli maglumatlar görnüşleriniň bahalaryny bir setirde birden köp üýtgeýjä bellemek bolýar. Esasanam kod okamak mümkinçiligi taýdan köp amatlylygy üpjün edýän aýratynlyk.
+
 ```
 a,b,c := 12, true, “Google”
 fmt.Println(a)
