@@ -102,3 +102,19 @@ func Foo() bar {
 <strong>Paket guramasy</strong>
 
 - Ilki bilen kod ýazyp başlanyňyzda, haýsy paketleriň elýeterli bolmalydygyny anyk görmek mümkin bolmazlygy mümkin. Arhitektura döredilende köp çemeleşilip bilner. Şeýle-de bolsa, ähli ýagdaýlara uýgunlaşmak üçin iň gowy çemeleşme däl. Köp gezek, taslamanyň başynda gönüden-göni ulanylmaly gatnaşyklary we dizaýn şablonlaryny görüp bilmezligimiz mümkin. Şol sebäpli ilki bilen kod ýazmaga başlamak we kodumyz belli bir kämillik ýaşyna ýetende gaýtadan işlemek arkaly paket döretmek usuly bolup biler. Elbetde, paketler döredilende üns bermeli käbir nokatlarymyza üns bermeli däldiris.
+ 
+- Bu nokatlaryň iň möhümi, Go tegelek (aýlaw) paket importyna rugsat bermeýär. Bolýar:
+
+- A paket B paketini import edýän bolsa, B paket A paketini import etmeli däldir.
+
+- Ora-da, A paket B paketini, B paketini C paketini, C paketini bolsa A paketini import edýän bolsa, aýlaw gutaransoň tegelek bukjany import ederis.
+
+- Kodumyzy modul esasynda paketlere bölmek hem usul hökmünde saýlanyp bilner. Şeýle-de bolsa, munuň ýetmezçiligi, tegelek salgylanma üçin henizem elýeterlidir. Mysal hökmünde, ulanyjyny we bölüm modullaryny aýyrmagy göz öňünde tutalyň.
+
+```
+demo/
+└── users
+│ ├── user.go
+└── department
+ └── department.go
+```
