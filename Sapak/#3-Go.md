@@ -118,3 +118,80 @@ demo/
 └── department
  └── department.go
 ```
+-Kodu ilk yazarken bu iki paket arasında karşılıklı import etme durumu olmasa bile ilerleyen aşamalarında user paketi içerisinde department paketini, department paketi içerisinde de user paketini kullanma ihtiyacı duymak mümkün olabilir bir durum olarak gözüküyor. Bu nedenle modül bazında ayrım yapmak da çok doğru gözükmemektedir.
+
+- Maslahat berilýän bukjany bölmek usullarynyň biri hökmünde aşakdaky 4 toparda paket döredip bileris.
+
+ - Domain Paketi
+ - Implementation Paketleri
+ - Mock Paketi
+ - Binary Paketleri
+
+<strong>Domain Paketi</strong>
+
+- Domain Package, amaly aýratyn görnüşleri öz içine alýan we taslamanyň merkezinde durýar.
+
+- Maglumat moVeri Modelleri: Account, User structsdellerini (strukturalary), interfeýsleri we hyzmatlary öz içine alyp biler. Mundan başga-da, bu maglumat modellerini we hyzmatlaryny ulanýan funksiýalar bu bukjada hem kesgitlenip bilner.
+
+ - Veri Modelleri: Account, User structs
+ - Servisler: AccountService, UserService interfaces
+ - Diğerleri: SortUsers() fonksiyonu veya UserCache struct’ı.
+
+<strong>Implementation Paketleri</strong>
+- Geçirmek prosesiniň deslapky kodlary, ulanylýan tehnologiýalardan ybarat paket atlary bilen degişli bukjanyň aşagynda ýerleşýär.
+
+- Mysal üçin, postgres paketiniň aşagyndaky Foo strukturasy bilen baglanyşykly Postgres DB-de CRUD amallarynyň FooService deslapky koduny we Redisde saklanjak Foo strukturasynyň keş keşlerini öz içine alýan FooService kesgitläp bileris. redis paket. Şeýlelik bilen, durmuşa geçirmeleri tehnologiýa esasynda izolirleýäris. Biziň üçin artykmaçlyk hökmünde her gatlak üçin aýratyn masgara maglumatlary döredip bileris, aýratyn we garaşsyz synaglar ýazyp bileris, gysgaça aýdanymyzda, gatlaklary biri-birinden aýyrýarys.
+
+```
+demo/
+└── foo.go
+└── postgres
+│ ├── foo.go
+└── redis
+ └── foo.go
+```
+
+<strong> Mock Paketi</strong>
+
+- Hususan-da, bu bukjanyň aşagynda synag üçin ulanjak masgaralaýjy maglumatlary ýygnap bileris. Bir paketiň aşagyndaky beýleki hyzmatlar üçin zerur maglumatlary ýygnap bileris.
+
+```
+demo/
+└── mock
+ └── foo.go
+```
+<strong> Binary Paketleri </strong>
+- Taslamada ulanýan paketlerimiziň jemlenen ikili kodlaryny "cmd" bukjasynyň aşagyndaky kiçi paketleri döredip saklap bileris.
+```
+demo/
+└── cmd
+ ├── demoserver
+ │ └── main.go
+ └── democlient
+ └── main.go
+```
+- Gysgaça syn hökmünde bukjanyň gurluşy aşakdaky ýaly bolup biler.
+
+```
+demo/
+├── cmd
+│ ├── demoserver
+│ │ └── main.go 
+│ └── democlient
+│ └── main.go 
+├── mock
+│ └── foo.go 
+├── postgres
+│ └── foo.go
+├── redis
+│ └── foo.go
+└── foo.go
+```
+- Uly taslamanyň üstünde işleýän bolsaňyz, taslamaňyzy subdomainlere bölmeli bolarsyňyz. Esasy katalogda, ähli kiçi domenlere degişli umumy görnüşi we interfeýs kesgitlemelerini ýazyp bilersiňiz. Şeýle-de bolsa, kodlary dürli domenler bilen izolirlemek we olary aýratyn paketlere ýazmak has dogry çemeleşme bolardy. Bu çemeleşmäniň peýdalaryny gysgaça jemlemek üçin:
+
+   -- Programma gatlaklarynyň arasyndaky aragatnaşygyň interfeýslerde dogry ýerine ýetirilmegi üpjün edilýär.
+   -- Her aýry aýry paketiň içinde aýratyn synag edilip bilner.
+   -- Tegelek garaşlylygyň döremeginiň öňi alynýar.
+   -- Programmanyň sagdyn we arassa ösmegi üpjün edilýär. Programma ösüp barýarka ýüze çykyp biljek bir mesele diňe degişli bukjada ýa-da täze ösüş döwründe beýleki paketleriň içki gurluşyna täsir etjek ýagdaý ýok.
+
+
