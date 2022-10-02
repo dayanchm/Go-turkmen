@@ -33,6 +33,8 @@ import “foo/bar”
 Bar paketini GitHub-da foo atly ammarda import etjek bolsak, ony aşakdaky ýaly import edip bileris:
 github.com/nailcankucuk/foo/bar import ediň.
 
+
+
 ```
 package main
 
@@ -53,5 +55,37 @@ package main
 
 func main() {
  fmt.Println(“Naber?”)
+}
+```
+
+<strong> Daşky gurşaw we elýeterlilik </strong>
+
+- Go dilinde, beýleki dillerden öwrenişen umumy, hususy, goralýan giriş kesgitleýjileri ýok. Munuň ýerine, giriş Go-da at goýmakda birinji harp bilen kesgitlenýär.
+
+- Görnüşiň, üýtgeýäniň, funksiýanyň .. we ş.m. baş harp bilen başlasa, paketden başga beýleki paketlerden hem girip boljakdygyny aňladýar. Şeýle-de bolsa, kiçi harp bilen başlasa, diňe şol bir bukjanyň içinde girip bolýar.
+
+```
+// Paket dışından da erişilebilir
+func Foo() {}
+// Sadece paket içerisinde erişilebilir.
+var bar string
+```
+- Başga bir bukjada eksport edilmeýän meýdanlardan ybarat strukturanyň bu meýdanlaryna gönüden-göni girip we belläp bilmeris.
+
+```
+package main
+import (
+ “fmt”
+ “github.com/nailcankucuk/userops”
+)
+func main() {
+ user := userops.NewUser(“Nail”, “Küçük”, “12345”)
+ fmt.Printf(“%+v\n”, user)
+ //Beklenen çıktısı: {First:Nail Last:Küçük password:12345}
+// Fakat aşağıdaki gibi direk erişmeyiz.
+ fmt.Println(user.password)
+ // ./main.go:17:18: user.password undefined (cannot refer to unexported field or method password)
+//user.password = “new” 
+ // ./main.go:18:6: user.password undefined (cannot refer to unexported field or method password)
 }
 ```
