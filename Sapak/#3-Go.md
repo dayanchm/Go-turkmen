@@ -89,3 +89,16 @@ func main() {
  // ./main.go:18:6: user.password undefined (cannot refer to unexported field or method password)
 }
 ```
+- Iň oňat tejribe hökmünde, daşarky giriş bilen funksiýanyň gaýdyp beriş görnüşi hökmünde elýeterli däl bahany ulanmaly däl. Aazyp boljak ýalňyşlyk almarsyňyz, ýöne dogry ulanylmaz.
+
+- Nädogry ulanmaklygyň mysaly.
+
+```
+type bar struct {}
+func Foo() bar {
+ return bar{}
+}
+```
+<strong>Paket guramasy</strong>
+
+- Ilki bilen kod ýazyp başlanyňyzda, haýsy paketleriň elýeterli bolmalydygyny anyk görmek mümkin bolmazlygy mümkin. Arhitektura döredilende köp çemeleşilip bilner. Şeýle-de bolsa, ähli ýagdaýlara uýgunlaşmak üçin iň gowy çemeleşme däl. Köp gezek, taslamanyň başynda gönüden-göni ulanylmaly gatnaşyklary we dizaýn şablonlaryny görüp bilmezligimiz mümkin. Şol sebäpli ilki bilen kod ýazmaga başlamak we kodumyz belli bir kämillik ýaşyna ýetende gaýtadan işlemek arkaly paket döretmek usuly bolup biler. Elbetde, paketler döredilende üns bermeli käbir nokatlarymyza üns bermeli däldiris.
