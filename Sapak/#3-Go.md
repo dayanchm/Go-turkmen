@@ -189,9 +189,9 @@ demo/
 ```
 - Uly taslamanyň üstünde işleýän bolsaňyz, taslamaňyzy subdomainlere bölmeli bolarsyňyz. Esasy katalogda, ähli kiçi domenlere degişli umumy görnüşi we interfeýs kesgitlemelerini ýazyp bilersiňiz. Şeýle-de bolsa, kodlary dürli domenler bilen izolirlemek we olary aýratyn paketlere ýazmak has dogry çemeleşme bolardy. Bu çemeleşmäniň peýdalaryny gysgaça jemlemek üçin:
 
-   -- Programma gatlaklarynyň arasyndaky aragatnaşygyň interfeýslerde dogry ýerine ýetirilmegi üpjün edilýär.
-   -- Her aýry aýry paketiň içinde aýratyn synag edilip bilner.
-   -- Tegelek garaşlylygyň döremeginiň öňi alynýar.
-   -- Programmanyň sagdyn we arassa ösmegi üpjün edilýär. Programma ösüp barýarka ýüze çykyp biljek bir mesele diňe degişli bukjada ýa-da täze ösüş döwründe beýleki paketleriň içki gurluşyna täsir etjek ýagdaý ýok.
+   - Programma gatlaklarynyň arasyndaky aragatnaşygyň interfeýslerde dogry ýerine ýetirilmegi üpjün edilýär.
+   - Her aýry aýry paketiň içinde aýratyn synag edilip bilner.
+   - Tegelek garaşlylygyň döremeginiň öňi alynýar.
+   - Programmanyň sagdyn we arassa ösmegi üpjün edilýär. Programma ösüp barýarka ýüze çykyp biljek bir mesele diňe degişli bukjada ýa-da täze ösüş döwründe beýleki paketleriň içki gurluşyna täsir etjek ýagdaý ýok.
 
 
