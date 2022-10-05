@@ -34,3 +34,34 @@ func main() {
  fmt.Printf(“oyunlar2: %v\n”, oyunlar2)
 }
 ```
+- <strong>PRİNT : </strong> 
+```
+oyunlar1: [Withcer PES CS:GO] 
+oyunlar2: [Witcher PES CS:GO]
+```
+- Bir massiw kesgitlenende, massiwiň maglumat görnüşindäki nol bahasy, baha bermeýän her indeks üçin awtomatiki bellenilýär.
+- Mysal üçin, ýokardaky 1-nji usuldaky massiwini ilkinji gezek kesgitlänimizde bir baha bellemedigimiz üçin, her indeksde setir maglumat görnüşiniň nol bahasy bolan boş setir (“”) bahasy bar.
+ 
+```
+package main
+
+import (
+ “fmt”
+)
+
+func main() {
+ oyunlar := [3]string{}
+ fmt.Printf(“oyunlar: %v \n”, oyunlar)
+bayraklar := [3]bool{}
+ fmt.Printf(“bayraklar: %v \n”, bayraklar)
+sayilar := [3]int{}
+ fmt.Printf(“sayilar: %v \n”, sayilar)
+}
+ ```
+ <strong>PRİNT:</strong>
+ 
+ ```
+oyunlar: [ ] // [“”, “”, “”]
+bayraklar: [false false false] 
+sayilar: [0 0 0]
+ ```
