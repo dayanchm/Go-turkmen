@@ -194,4 +194,28 @@ demo/
    - Tegelek garaşlylygyň döremeginiň öňi alynýar.
    - Programmanyň sagdyn we arassa ösmegi üpjün edilýär. Programma ösüp barýarka ýüze çykyp biljek bir mesele diňe degişli bukjada ýa-da täze ösüş döwründe beýleki paketleriň içki gurluşyna täsir etjek ýagdaý ýok.
 
+<div align="center">Daşarky paketleri gurmak we täzelemek (update)</div>
 
+- Köp dillerde bolşy ýaly, Go-da öz ösüş gurşawymyzda beýleki döredijiler tarapyndan döredilen paketleri ulanyp bileris. Ösüş gurşawymyza daşarky bukjany import etmek üçin ilki bilen Go diliniň gurallaryndan get funksiýasyny ulanmaly. Bu funksiýa bilen ilki bilen paketleri ýerli ösüş gurşawyna göçürip alýarys. Göçürip almak, GOPATH ulgam üýtgeýjisiniň kesgitlenen katalogyna edilýär. GOPATH katalogyny görmek üçin aşakdaky setiri terminalda işledip bilersiňiz.
+
+```
+$ go env GOPATH
+/Users/nailcankucuk/go
+```
+- Foo sample paketini ýerli enjamymyza göçürip almak üçin aşakdaky buýruk setirini bukjanyň ýerleşýän git reposynyň salgysy bilen işledýäris.
+```
+$ go get github.com/nailcankucuk/foo
+```
+- Bu buýrukdan soň paket aşakdaky kataloga göçüriler.
+```
+$GOPATH/src/github.com/nailcankucuk/foo
+```
+- Şeýlelik bilen, indi bu bukjany import (keywords) bilen import edip öz kodumyzda ulanyp bileris.
+
+- Paket kodlaryny ýerli ýerimizde täzelemek islesek, paketiň iň täzelenen görnüşini alanymyzdan soň -u ýazyp ýerli ýerimizde alarys. Elbetde, paket ýerli däl bolsa, iň soňky wersiýasyny göçürip alarys.
+
+```
+$ go get -u github.com/nailcankucuk/foo
+```
+
+- Go Programming Language paket gurluşlaryny gysgaça ýazmaga synanyşdym. Bu hem siziň üçin peýdaly bolar diýip umyt edýärin :)
