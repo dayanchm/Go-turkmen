@@ -478,5 +478,12 @@ Print çap etmek funksiýalary işlikleri ulanyp biler. Bu işlikler dürli form
 <strong>Käbir işlikler:</strong>
 
 ```
-
+// %v -> tip kontrolü yapmadan değeri yazar
+// %s -> string değerler için kullanılır
+// %d -> numerik değerler için (int, int32, etc)
+// %T -> veri tipini döner
+// %f -> Ondalıklı değerler için
+// \ -> escape karakteri
+// \n -> bir alt satıra geçmek için kullanılır
+// \t -> tab boşluğu bırakmak için kullanılır
 ```
