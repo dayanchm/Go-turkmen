@@ -487,3 +487,112 @@ Print çap etmek funksiýalary işlikleri ulanyp biler. Bu işlikler dürli form
 // \n -> bir alt satıra geçmek için kullanılır
 // \t -> tab boşluğu bırakmak için kullanılır
 ```
+
+<strong>Mysal Kod:</string>
+
+```
+package main
+import (
+ “fmt”
+)
+func main() {
+ const adi, yasi, calisiyorMu, yemekUcreti = “Nail”, 32, true, 21.5
+fmt.Printf(“Adı: %v \n”, adi)
+ fmt.Printf(“Yaşı: %v \n”, yasi)
+ fmt.Printf(“Çalışıyor mu : %v \n”, calisiyorMu)
+ fmt.Printf(“Yemek ücreti: %v”, yemekUcreti)
+ fmt.Println(“********”)
+ fmt.Printf(“Adı: %s \n”, adi)
+ fmt.Printf(“Yaşı: %d \n”, yasi)
+ fmt.Printf(“Çalışıyor mu : %t \n”, calisiyorMu)
+ fmt.Printf(“Yemek ücreti: %f”, yemekUcreti)
+ fmt.Println(“********”)
+ fmt.Printf(“Adı: %T \n”, adi)
+ fmt.Printf(“\t Yaşı: %T \n”, yasi)
+ fmt.Printf(“\t \t Çalışıyor mu : %T \n”, calisiyorMu)
+ fmt.Printf(“\t \t \t Yemek ücreti: %T”, yemekUcreti)
+}
+```
+
+<strong>Print:</strong>
+```
+Adı: Nail 
+Yaşı: 32 
+Çalışıyor mu : true 
+Yemek ücreti: 21.5********
+Adı: Nail 
+Yaşı: 32 
+Çalışıyor mu : true 
+Yemek ücreti: 21.500000********
+Adı: string 
+ Yaşı: int 
+   Çalışıyor mu : bool 
+     Yemek ücreti: float64
+```
+
+
+Yorum Satırları
+Go dilinde yorum satırları diğer birçok dil ile aynı yöntemler kullanılarak oluşturulmaktadır. Bu yöntemlerden en basiti iki adet slash karakterini satırın balına eklemektir.
+
+// Yorum satırı…
+Eğer bir satır bloğunu yorum satırı haline getirmek istiyorsak da bu satırların başına tek tek // ekleyebiliriz veya bloğun en başına /* ,en sonuna da */ karakterlerini ekleyerek içeride kalan satırları yorum satırı haline getirmiş oluruz.
+
+/*
+ Bu satırların
+ hepsi 
+ aslında yorum satırıdır
+*/
+Bir satırada satırın başına değil istediğimiz herhangi bir yerine de // karakterlerini ekleyerek satırda bu karakterlerden sonrasının yorum satırı olmasını sağlayabiliriz.
+
+z := x % 2 // x’in 2 ile bölümünden kalanı verir
+Bir uygulamanın dokümantasyonunun oluşturulması da çok önemlidir. Go dili tasarlanırken de yazılan kodun kolay dokümante edilebilmesini sağlamak amacı ile yorum satırlarından yararlanılması planlanmıştır. GoDoc oluşturulurken sizin kod içerisinde, fonksiyonlarınızın üzerinde yazdığınız yorum satırları kullanılmaktadır. Bu nedenle kod içerisindeki yorum satırlarına daha çok önem göstermek gerekmektedir.
+
+GoDoc ile ilgili aşağıdaki bağlantıdan daha detaylı bilgi alabilirsiniz.
+
+The Go Blog
+Andrew Gerrand 31 March 2011 The Go project takes documentation seriously. Documentation is a huge part of making…
+blog.golang.org
+
+Structs
+Go diline özgü veri tiplerinden birisi de structlardır.
+Diğer dillerdeki model yapısına benzerlikleri vardır. İçerisinde alanlar barındıran bir veri topluluğudur.
+
+type keyword’ü kullanılarak tanımlanır
+
+type User struct {
+ Name string
+ Email string
+}
+Struct içerisindeki alanlara . karakteri ile erişebiliriz. Eriştiğimiz alan bize değerini döner. İstersek = ekleyerek ilgili alanın değerini değiştirebiliriz.
+
+Tanımlı struct tipinde bir nesne oluşturmak için aşağıdaki yöntemlerin hepsi geçerlidir.
+
+a := User{}
+b := User{
+ Name: “Homer Simpson”,
+ Email: “homer@example.com”,
+}
+c := User{Email: “marge@example.com”}
+c.Name = “Marge Simpson”
+d := User{Name: “Homer Simpson”, Email: “homer@example.com”}
+e := User{“Homer Simpson”,”homer@example.com”}
+fmt.Println(a.Name)
+fmt.Printf(“User’s email is %s”, e.Email)
+Fakat e değişkenini oluşturduğumuz yöntem tavsiye edilen bir kullanım biçimi değildir. Çünkü ileride User struct’ı içerisindeki bir değişiklik durumunda uygulamamızda aşağıdaki gibi bir hata almamız kaçınılmazdır.
+
+type User struct {
+ ID int
+ Name string
+ Email string
+}
+Değişikliği sonrası konsol çıktısı:
+
+too few values in User literal
+Go dilini öğrenme sürecimde sözdizimi ve veri tipleri ile ilgili tuttuğum notları sade bir şekilde sizlerle paylaşmaya çalıştım. Bundan sonraki süreçlerde de yine aynı şekilde notlarımı bir seri olarak paylaşmayı hedefliyorum.
+
+Umarım sizler için de faydalı olmuştur :)
+
+Burada paylaştığım bilgiler çoğunlukla Google’ın Go Dili üzerine düzenlemiş olduğu Workshop’larda kullandığı sunumlardan ve Go resmi sayfasındaki dökümantasyon ve tur bölümündeki açıklamalardan edindiğim notları içermektedir.
+
+İletişimde kalmak isterseniz linkedin üzerinden haberleşebiliriz.
+
