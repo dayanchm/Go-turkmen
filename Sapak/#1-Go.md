@@ -25,7 +25,7 @@ Go taslamasynyň döredijilik we dörediji toparyna programma üpjünçiligi we 
  - Go Documentation [Link](https://go.dev/doc/)
  - Go Online editor [Link](https://go.dev/play/)
 
-## <div align="center">Şimdi bu sayfaya girerek ilk Go kodumuzu çalıştırabiliriz.</div>
+### <div align="center">Şimdi bu sayfaya girerek ilk Go kodumuzu çalıştırabiliriz.</div>
 ```
 package main
 
