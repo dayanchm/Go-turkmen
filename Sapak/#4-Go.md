@@ -58,7 +58,7 @@ sayilar := [3]int{}
  fmt.Printf(“sayilar: %v \n”, sayilar)
 }
  ```
- <strong>PRİNT:</strong>
+ - <strong>PRİNT:</strong>
  
  ```
 oyunlar: [ ] // [“”, “”, “”]
