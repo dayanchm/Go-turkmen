@@ -24,3 +24,18 @@ Go taslamasynyň döredijilik we dörediji toparyna programma üpjünçiligi we 
 
  - Go Documentation [Link](https://go.dev/doc/)
  - Go Online editor [Link](https://go.dev/play/)
+
+## <div align="center">Şimdi bu sayfaya girerek ilk Go kodumuzu çalıştırabiliriz.</div>
+```
+package main
+
+import (
+ “fmt”
+)
+
+func main() {
+ fmt.Println(“Hello World!”)
+}
+```
+
+Go hakda soňky döwürde gaty gyzyklanýan we uzak wagtlap öwrenmäge synanyşýan Go hakda gysga maglumat bermäge synanyşdym. Bu makaladan soň, okuw döwründe alan belliklerimi ýygnaryn we bu ýerde yzygiderli paýlaşaryn.
