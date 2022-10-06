@@ -65,3 +65,76 @@ oyunlar: [ ] // [“”, “”, “”]
 bayraklar: [false false false] 
 sayilar: [0 0 0]
  ```
+- Eger massiwiň ululygyndan başga bir görkezijä baha bellemäge synanyşsaňyz, "çäkden çykmak" ýalňyşlygy ýüze çykar.
+
+```
+package main
+
+func main() {
+ oyunlar := [3]string{}
+ oyunlar[3] = “Mario”
+}
+```
+
+- <strong>PRİNT:</strong>
+
+```
+./prog.go:5:9: invalid array index 3 (out of bounds for 3-element array)
+```
+
+- Adaty bir massiw kesgitläniňizde, aslynda bir ölçegli bolýar. Şeýle-de bolsa, aşakdaky ýaly iki ölçegli massiwleri (matrisa) döredip bilersiňiz.
+
+```
+type Matris [3][3]string
+
+func main() {
+ m := Matris{
+ {“a”,”b”,”c”},
+ {“1”,”2",”3"},
+ {“x”,”y”,”z”},
+ }
+```
+- Toplumlary gaýtalamak üçin beýleki dillerdäki ýaly aýlawlary ulanýarys. Aşakda dürli aýlawly massiwdäki amallaryň birnäçe mysallaryny görkezmek isleýärin.
+
+```
+package main
+
+import “fmt”
+func main() {
+ dizi := [3]int{0, 1, 2}
+ // for döngüsü ile
+ fmt.Println(“For v1”)
+ for i := 0; i < len(dizi); i++ {
+  fmt.Println(dizi[i])
+ }
+ fmt.Println(“Continue & Break”)
+ // continue & break
+ for i := 0; i < len(dizi); i++ {
+  fmt.Println(dizi[i])
+  if i == 0 {
+   // Döngü başına döner
+   continue
+  }
+  if i == 2 {
+   // Döngüden çıkar
+   break
+  }
+  fmt.Println(“döngüye devam etti”)
+ }
+ fmt.Println(“For v2”)
+ // farklı bir for döngüsü
+ var i int
+ for {
+  fmt.Println(dizi[i])
+  i += 1
+  if i >= len(dizi) {
+   break
+  }
+ }
+ fmt.Println(“Range”)
+ // range ile
+ for index, value := range dizi {
+  fmt.Println(index, value)
+ }
+}
+```
