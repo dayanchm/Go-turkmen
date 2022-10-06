@@ -10,3 +10,10 @@ func main() {
 ```
 
 - Languagehli dil aýlaw amallaryny, massiwlerdäki ýaly gaýtalama amallarynda ulanyp bileris.
+
+```
+for index, carBrand := range carSlice {
+ fmt.Println(index, carBrand)
+}
+```
+- Dilimleriň gurluş taýdan 3 sany esasy maglumatlary bar. Bular dilimiň uzynlygy, kuwwaty we içindäki maglumatlary saklaýan massiwdir. Täze görnüş hökmünde döretjek bolsak, ony şeýle kesgitläp bilerdik:
