@@ -244,4 +244,3 @@ cars: [“BMW” “Ferrari” “Opel” “Skoda”]
 Copy fonksiyonundan sonra
 cars: [“BMW” “Ferrari” “Opel” “Skoda”] 
 copyCars: [“BMW” “Ferrari” “Opel” “Skoda”]
-Go Programlama Dili ile tanıştığım slicelar hakkında kısaca yazmaya çalıştım. Umarım sizler için de faydalı olmuştur :)
