@@ -2,9 +2,8 @@
 
 ### Kitapçygyň içinde go programmirleme dili hakynda türkmen diline terjime edilen ýazgylardan we kod seterlerinden ybaratdyr. Bu kitapça go diline täze başlanlar üçindir.
 
-<p>İçinde diňe go öz websitynda bolan ýazgylar dälde go içi kodlar we nädip website etmeli, nädip sistema gurmaly ýaly temalar hem bardyr.</p>
-<p>Eger sizlere bu kitapça işiňize ýaramasa öz website <a href="https://go.dev/">golang</a> seredip otaýdan giňişleýin öwrenip bilersiňiz.</p>
-
+- İçinde diňe go öz websitynda bolan ýazgylar dälde go içi kodlar we nädip website etmeli, nädip sistema gurmaly ýaly temalar hem bardyr.
+- Eger sizlere bu kitapça işiňize ýaramasa öz website <a href="https://go.dev/">golang</a> seredip otaýdan giňişleýin öwrenip bilersiňiz.
 - Terjime edilen we özümden goşulan ýerleri bardyr, terjimede ýalňyş giden ýerleri bolup biler. Käbir sözler türkmen dilimizde bolmany üçin ýa da manysyny ýitirýäni üçin dilimden gelşi ýaly terjime etdim. Türk,iňlis,rus dillerinde de sözler gabat gelip bilersiňiz. Şon üçin bu kitapçada ýalňyş sözler gabat gelseňiz sizleriň hem kömegi bilen aşakdaky muhammetgeldiyevdayanc@gmail.com ugradyp bile düzeldip bileris. 
 
 ## Go dili taryhy
