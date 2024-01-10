@@ -38,7 +38,7 @@ func main() {
 }
 ```
 
-Bu örnekte, Person tipinde bir slice tanımlanır ve sort.Slice() fonksiyonu kullanılarak Age alanına göre küçükten büyüğe doğru sıralama yapılır.
+Bu mysalda Şahsy görnüşiň bir bölegi kesgitlenýär we sort.Slice () funksiýasy, ýaş meýdanyna görä kiçiden ulusyna tertiplemek üçin ulanylýar.
 
 Çykyş:
 
