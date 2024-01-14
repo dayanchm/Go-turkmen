@@ -42,4 +42,4 @@ default:
 }
 ```
 
-Bu örnekte, switch ifadesi, x değişkeninin değerine göre farklı işlemler yapar. Eğer x değişkeni 1 ise "x is 1" metnini yazdırır. Eğer x değişkeni 2 ise "x is 2" metnini yazdırır. Eğer x değişkeni 3 ise "x is 3" metnini yazdırır. Eğer x değişkeni 1, 2 veya 3 değilse, default bloğu çalışacak ve "x is not 1, 2 or 3" metnini yazdıracaktır.
+Bu mYSALDA switch ifadesi, x değişkeninin değerine göre farklı işlemler yapar. Eğer x değişkeni 1 ise "x is 1" metnini yazdırır. Eğer x değişkeni 2 ise "x is 2" metnini yazdırır. Eğer x değişkeni 3 ise "x is 3" metnini yazdırır. Eğer x değişkeni 1, 2 veya 3 değilse, default bloğu çalışacak ve "x is not 1, 2 or 3" metnini yazdıracaktır.
