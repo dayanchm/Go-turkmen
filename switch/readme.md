@@ -1,6 +1,6 @@
 # Switch
 
-switch ifadesi, Go programlama dilinde, belirli koşullara göre farklı işlemler yapmak için kullanılır:
+switch, Go programmirleme dilinde belli şertlere baglylykda dürli amallary ýerine ýetirmek üçin ulanylýar:
 
 ```golang
 day := "sunday"
@@ -25,9 +25,9 @@ default:
 }
 ```
 
-Bu örnekte, switch ifadesi, day değişkeninin değerine göre farklı işlemler yapar. Eğer day değişkeni "monday" ise "Today is Monday" metnini yazdırır. Eğer day değişkeni "tuesday" ise "Today is Tuesday" metnini yazdırır. Bu şekilde, day değişkeninin değerine göre farklı kod blokları çalıştırılabilir.
+Bu mysalda, switch, day üýtgeýjiniň bahasyna baglylykda dürli amallary ýerine ýetirýär. Gün üýtgeýjisi "duşenbe" bolsa, "Şu gün duşenbe" tekstini çap edýär. Gün üýtgeýjisi "sişenbe" bolsa, "Şu gün sişenbe" tekstini çap edýär. Şeýlelik bilen, gün üýtgeýjisiniň bahasyna baglylykda dürli kod bloklary ýerine ýetirilip bilner.
 
-default ifadesi, tüm koşulların doğru olmadığı durumlarda çalışacak olan bir kod bloğunu ifade eder.
+Bellenen jümle, ähli şertler dogry bolmasa işleýän kod koduna degişlidir.
 
 ```golang
 switch x {
@@ -42,4 +42,4 @@ default:
 }
 ```
 
-Bu mYSALDA switch ifadesi, x değişkeninin değerine göre farklı işlemler yapar. Eğer x değişkeni 1 ise "x is 1" metnini yazdırır. Eğer x değişkeni 2 ise "x is 2" metnini yazdırır. Eğer x değişkeni 3 ise "x is 3" metnini yazdırır. Eğer x değişkeni 1, 2 veya 3 değilse, default bloğu çalışacak ve "x is not 1, 2 or 3" metnini yazdıracaktır.
+Bu mysalda switch ifadesi, x üýtgeýjiniň bahasyna baglylykda dürli amallary ýerine ýetirýär. X üýtgeýjisi 1 bolsa, "x 1" tekstini çap edýär. Eger üýtgeýji 2 bolsa, "x 2" tekstini çap edýär. Eger üýtgeýji 3 bolsa, "x is 3" tekstini çap edýär. Eger üýtgeýji 1, 2 ýa-da 3 däl bolsa, deslapky blok işleýär we "x 1, 2 ýa-da 3 däl" tekstini çap eder.
