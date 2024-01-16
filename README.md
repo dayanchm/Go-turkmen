@@ -1,6 +1,6 @@
   <div align="center"><img src="https://go.dev/images/gophers/ladder.svg"></div>
 
-# <div align="center">Golang türkmençe</div>
+# <div align="start">Golang türkmençe</div>
 
 ### Kitapçygyň içinde go programmirleme dili hakynda türkmen diline terjime edilen ýazgylardan we kod seterlerinden ybaratdyr. Bu kitapça go diline täze başlanlar üçindir.
 
