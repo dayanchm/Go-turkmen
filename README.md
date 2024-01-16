@@ -12,14 +12,10 @@ Repony halaýan bolsaňyz, ony ýyldyz edip, has köp adama ýeter ýaly sosial 
 
 
 ## Go dili
-Go, Google tarapyndan 2007-nji ýyldan bäri işlenip düzülen açyk çeşme programmirleme dilidir. Ilkinji web sahypasynda golang.org domen ady bolansoň, oňa golang diýilýär, ýöne dogry ady Go. Esasan ulgam programmirlemek üçin düzülen we statiki görnüşli dil. 2009-njy ýylyň noýabr aýynda çykdy. Go compiler "gc", açyk çeşme (open-source) programma üpjünçiligi hökmünde Linux, OS X, Windows, BSD we Unix-iň käbir wersiýalary, şeýle hem 2015-nji ýyldan başlap smartfonlar üçin işlenip düzüldi
+Go, Google tarapyndan 2007-nji ýyldan bäri işlenip düzülen açyk çeşme programmirleme dilidir. Ilkinji web sahypasynda golang.org domen ady bolansoň, oňa golang diýilýär, ýöne dogry ady Go. Esasan ulgam programmirlemek üçin düzülen we statiki görnüşli dil. 2009-njy ýylyň noýabr aýynda çykdy. Go compiler "gc", açyk çeşme (open-source) programma üpjünçiligi hökmünde Linux, OS X, Windows, BSD we Unix-iň käbir wersiýalary, şeýle hem 2015-nji ýyldan başlap smartfonlar üçin işlenip düzüldi.
 
 ## İçindäkiler
 
-- [Go Programmirleme dili-Esaslary](Sapak/%231-Go.md)
-- [Go Programmirleme dili - Sintaksis(Syntax) we maglumatlaryň görnüşleri (data type)](Sapak/%232-Go.md)
-- [Go Programlama dili — Paketler](Sapak/%233-Go.md)
-- [Go Programlama dili — Arrays](Sapak/%234-Go.md)
 - [Values](#values)
 - [Variables](#variables)
 - [Constants](#constants)
@@ -61,3 +57,11 @@ Go, Google tarapyndan 2007-nji ýyldan bäri işlenip düzülen açyk çeşme pr
 - [Strings and Runes](#strings-and-runes)
 - [Text Templates](#text-templates)
 - [JSON](#json)
+
+
+## Aýratynlyklar
+
+- [Go Programmirleme dili-Esaslary](Sapak/%231-Go.md)
+- [Go Programmirleme dili - Sintaksis(Syntax) we maglumatlaryň görnüşleri (data type)](Sapak/%232-Go.md)
+- [Go Programlama dili — Paketler](Sapak/%233-Go.md)
+- [Go Programlama dili — Arrays](Sapak/%234-Go.md)
