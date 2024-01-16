@@ -1,9 +1,14 @@
-# <div align="center">Golang-sapaklary</div>
+  <div align="center"><img src="https://go.dev/images/gophers/ladder.svg"></div>
+
+# <div align="center">Golang türkmençe</div>
 
 ### Kitapçygyň içinde go programmirleme dili hakynda türkmen diline terjime edilen ýazgylardan we kod seterlerinden ybaratdyr. Bu kitapça go diline täze başlanlar üçindir.
 
 - İçinde diňe go öz websitynda bolan ýazgylar dälde go içi kodlar we nädip website etmeli, nädip sistema gurmaly ýaly temalar hem bardyr.
 - Eger sizlere bu kitapça işiňize ýaramasa öz website <a href="https://go.dev/">golang</a> seredip otaýdan giňişleýin öwrenip bilersiňiz.
+
+Repony halaýan bolsaňyz, ony ýyldyz edip, has köp adama ýeter ýaly sosial media hasaplaryňyzda paýlaşyp bilersiňiz ⭐️
+
 
 
 ## Go dili
