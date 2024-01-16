@@ -65,3 +65,11 @@ Go, Google tarapyndan 2007-nji ýyldan bäri işlenip düzülen açyk çeşme pr
 - [Go Programmirleme dili - Sintaksis(Syntax) we maglumatlaryň görnüşleri (data type)](Sapak/%232-Go.md)
 - [Go Programlama dili — Paketler](Sapak/%233-Go.md)
 - [Go Programlama dili — Arrays](Sapak/%234-Go.md)
+
+
+## Golang-işleri
+
+- [Golangjob.yxz](https://golangjob.xyz/)
+- [Go / Golang Jobs & developers](https://www.golangprojects.com/)
+- [Golang Jobs](https://golang.cafe/)
+- [Golang Web3 Jobs](https://web3.career/golang-jobs)
