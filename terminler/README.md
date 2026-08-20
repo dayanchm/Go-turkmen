@@ -1,6 +1,6 @@
 # Iňlisçe–türkmençe programmirleme terminleri
 
-Sözlügiň interaktiw görnüşi: [Go sözlük website](../website/sozluk.html).
+Sözlügiň interaktiw görnüşi: [go.dayanch.dev/sozluk.html](https://go.dayanch.dev/sozluk.html).
 
 ## Esasy terminler
 
@@ -30,4 +30,3 @@ Sözlügiň interaktiw görnüşi: [Go sözlük website](../website/sozluk.html)
 ## Termin goşmak düzgüni
 
 Her täze termin üçin iňlisçe adyny, türkmençe düşündirişini, kategoriýasyny we mümkin bolsa kiçi Go koduny goş. Sözme-söz terjime düşnüksiz bolsa, gysga düşündiriş ulan.
-

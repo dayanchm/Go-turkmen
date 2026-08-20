@@ -7,6 +7,8 @@
 
 Bu repozitoriýa Go diline täze başlanlar we bilimini ösdürmek isleýänler üçin türkmençe sapaklary, kod mysallaryny, testleri, algoritmleri hem-de amaly gollanmalary birleşdirýär.
 
+**Website:** [go.dayanch.dev](https://go.dayanch.dev/)
+
 Taslama peýdaly bolsa, GitHub-da ýyldyz berip we beýleki öwrenijiler bilen paýlaşyp bilersiň.
 
 ## Go barada
@@ -28,12 +30,12 @@ Resmi çeşmeler:
 |---|---|
 | [Go temalary](go-temalary/README.md) | Go diliniň esasy düşünjeleri we kod mysallary |
 | [Goşmaça sapaklar](gosmaca-sapaklar/README.md) | Test, HTTP, SQL, Docker we ösen temalar |
-| [Interaktiw website](website/README.md) | Sapaklar, test, profil, Playground we sözlük |
+| [Interaktiw website](https://go.dayanch.dev/) | Sapaklar, test, profil, Playground we sözlük |
 | [Go Cheatsheet](cheatsheet/README.md) | Sintaksisi çalt ýatlamak üçin gysga gollanma |
 | [Algoritmler](algoritmler/README.md) | Gözleg, sorting, maglumat gurluşlary, BFS we DFS |
 | [Design Patterns](design-patterns/README.md) | Go-da ulanylýan programma gurluş nusgalary |
 | [Go testi](go-temalary/testler/readme.md) | Esasy temalar boýunça bilim barlagy |
-| [Türkmençe Go sözlügi](website/sozluk.html) | Iňlisçe–türkmençe interaktiw termin sözlügi |
+| [Türkmençe Go sözlügi](https://go.dayanch.dev/sozluk.html) | Iňlisçe–türkmençe interaktiw termin sözlügi |
 | [Amaly taslamalar](amaly-taslamalar/README.md) | Doly işleýän Go taslamalary we testler |
 | [Kod ýumuşlary](kod-yumuslary/README.md) | Ýeňilden kynlaşýan programmirleme meseleleri |
 | [Çözgütler](cozgutler/README.md) | Ýumuşlaryň düşündirişli çözgütleri |
@@ -127,11 +129,11 @@ Resmi çeşmeler:
 
 ## Giňişleýin sapaklar
 
-- [Go programmirleme diliniň esaslary](Sapak/%231-Go.md)
-- [Sintaksis we maglumat görnüşleri](Sapak/%232-Go.md)
-- [Paketler](Sapak/%233-Go.md)
-- [Massiwler](Sapak/%234-Go.md)
-- [Dilimler](Sapak/%235-Go.md)
+- [Go programmirleme diliniň esaslary](sapaklar/%231-Go.md)
+- [Sintaksis we maglumat görnüşleri](sapaklar/%232-Go.md)
+- [Paketler](sapaklar/%233-Go.md)
+- [Massiwler](sapaklar/%234-Go.md)
+- [Dilimler](sapaklar/%235-Go.md)
 
 ## Go boýunça iş gözlemek
 

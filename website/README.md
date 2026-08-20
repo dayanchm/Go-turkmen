@@ -2,6 +2,10 @@
 
 Bu statik website goşmaça serwer ýa-da maglumat bazasy talap etmeýär.
 
+**Production website:** [https://go.dayanch.dev/](https://go.dayanch.dev/)
+
+**Interaktiw sözlük:** [https://go.dayanch.dev/sozluk.html](https://go.dayanch.dev/sozluk.html)
+
 Sahypa PWA hökmünde taýýarlanyldy: goldaýan brauzerlerde telefona ýa-da kompýutere programma ýaly gurup, internet ýok wagty hem ulanyp bolýar. Test netijelerine görä achievement nyşanlary açylýar.
 
 Goşmaça aýratynlyklar:
@@ -21,11 +25,6 @@ python3 -m http.server 8080
 
 Soň `http://localhost:8080` salgysyny aç.
 
-## GitHub Pages-de çap etmek
+## Production
 
-1. GitHub repozitoriýasynyň **Settings → Pages** bölümine gir.
-2. **Build and deployment** çeşmesi hökmünde **GitHub Actions** saýla.
-3. Repozitoriýany GitHub-a push et.
-4. Deploy tamamlanandan soň Pages salgysy şol bölümde görkeziler.
-
-`.github/workflows/pages.yml` faýly `website` bukjasyny awtomatik çap edýär.
+Website Vercel-de çap edilýär we [go.dayanch.dev](https://go.dayanch.dev/) domeninde işleýär. Vercel taslamasynda Root Directory hökmünde `website` saýlanmaly.

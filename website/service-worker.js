@@ -1,4 +1,4 @@
-const CACHE_NAME = "go-turkmen-v3";
+const CACHE_NAME = "go-turkmen-v4";
 const APP_FILES = [
   "./",
   "./index.html",
@@ -7,7 +7,9 @@ const APP_FILES = [
   "./script.js",
   "./sozluk.js",
   "./manifest.webmanifest",
-  "./icon.svg"
+  "./icon.svg",
+  "./robots.txt",
+  "./sitemap.xml"
 ];
 
 self.addEventListener("install", (event) => {

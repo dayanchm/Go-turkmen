@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://go.dayanch.dev/sitemap.xml
+
