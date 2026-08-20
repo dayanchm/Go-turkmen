@@ -1,0 +1,20 @@
+{
+  "name": "Go Türkmençe",
+  "short_name": "Go TK",
+  "description": "Go dili boýunça türkmençe sapaklar we interaktiw test",
+  "lang": "tk",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f8f6",
+  "theme_color": "#087f9d",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
+

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#087f9d"/>
+  <path d="M93 176h326v160H93z" fill="#fff" opacity=".12"/>
+  <text x="256" y="304" fill="#fff" font-family="Arial, sans-serif" font-size="180" font-weight="700" text-anchor="middle">Go</text>
+</svg>
+

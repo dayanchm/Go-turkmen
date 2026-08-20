@@ -1,0 +1,35 @@
+name: Test sahypasyny çap et
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repozitoriýany al
+        uses: actions/checkout@v4
+      - name: Pages-i taýýarla
+        uses: actions/configure-pages@v5
+      - name: Website faýllaryny ýükle
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: website
+      - name: Çap et
+        id: deployment
+        uses: actions/deploy-pages@v4
+

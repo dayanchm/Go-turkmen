@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="tk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Iňlisçe–türkmençe Go we programmirleme terminleriniň sözlügi">
+  <meta name="theme-color" content="#087f9d">
+  <title>Go Sözlük — Iňlisçe–türkmençe</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="dictionary-header">
+    <nav class="nav" aria-label="Esasy menýu">
+      <a class="brand" href="index.html"><span class="brand-mark">Go</span><span>Türkmençe</span></a>
+      <div class="nav-actions">
+        <a class="nav-link" href="index.html">← Baş sahypa</a>
+        <button id="theme-button" class="theme-button" type="button" aria-label="Gara temany aç">◐</button>
+      </div>
+    </nav>
+
+    <div class="dictionary-hero">
+      <div>
+        <p class="eyebrow">Iňlisçe → türkmençe</p>
+        <h1>Go sözlük.</h1>
+        <p>Programmirleme terminleriniň türkmençe düşündirişi, ulanylyşy we kod mysallary.</p>
+      </div>
+      <div class="dictionary-total"><strong id="total-terms">0</strong><span>termin</span></div>
+    </div>
+  </header>
+
+  <main class="dictionary-main">
+    <section class="term-of-day" aria-labelledby="daily-term-title">
+      <div><p class="eyebrow">Günüň termini</p><h2 id="daily-term-title"></h2></div>
+      <p id="daily-term-description"></p>
+      <button id="daily-term-button" class="outline-button" type="button">Doly oka</button>
+    </section>
+
+    <section class="dictionary-tools" aria-label="Sözlük gözlegi">
+      <label class="dictionary-search">
+        <span>⌕</span>
+        <input id="term-search" type="search" placeholder="Mysal: goroutine, üýtgeýji, test..." autocomplete="off">
+        <kbd>/</kbd>
+      </label>
+      <div id="category-filters" class="category-filters" aria-label="Kategoriýalar"></div>
+    </section>
+
+    <div class="dictionary-summary">
+      <p><strong id="visible-count">0</strong> netije görkezilýär</p>
+      <button id="random-term-button" type="button">Tötänleýin termin ↗</button>
+    </div>
+
+    <section id="term-grid" class="term-grid" aria-live="polite"></section>
+    <p id="term-empty" class="term-empty hidden">Bu gözlege laýyk termin tapylmady.</p>
+  </main>
+
+  <dialog id="term-dialog" class="term-dialog">
+    <button id="term-dialog-close" class="term-dialog-close" type="button" aria-label="Ýap">×</button>
+    <p id="dialog-category" class="eyebrow"></p>
+    <h2 id="dialog-english"></h2>
+    <p id="dialog-turkmen" class="dialog-turkmen"></p>
+    <p id="dialog-description"></p>
+    <pre id="dialog-code" class="code-block hidden"><code></code></pre>
+    <div class="dialog-actions">
+      <button id="copy-term-link" class="outline-button" type="button">Terminiň linkini göçür</button>
+      <span id="copy-status" role="status"></span>
+    </div>
+  </dialog>
+
+  <footer>
+    <a class="brand footer-brand" href="index.html"><span class="brand-mark">Go</span><span>Türkmençe</span></a>
+    <p>Iňlisçe–türkmençe açyk programmirleme sözlügi.</p>
+    <p>© <span id="current-year"></span></p>
+  </footer>
+
+  <script src="sozluk.js"></script>
+</body>
+</html>
+

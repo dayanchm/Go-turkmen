@@ -1,75 +1,149 @@
-  <div align="center"><img src="https://go.dev/images/gophers/ladder.svg"></div>
+<div align="center">
+  <img src="https://go.dev/images/gophers/ladder.svg" alt="Go gopherleri" width="420">
 
-# <div align="start">Golang türkmençe</div>
+  <h1>Go türkmençe</h1>
+  <p>Go programmirleme dilini türkmençe öwrenmek üçin açyk çeşmeli okuw çeşmesi.</p>
+</div>
 
-### Kitapçygyň içinde go programmirleme dili hakynda türkmen diline terjime edilen ýazgylardan we kod seterlerinden ybaratdyr. Bu kitapça go diline täze başlanlar üçindir.
+Bu repozitoriýa Go diline täze başlanlar we bilimini ösdürmek isleýänler üçin türkmençe sapaklary, kod mysallaryny, testleri, algoritmleri hem-de amaly gollanmalary birleşdirýär.
 
-- İçinde diňe go öz websitynda bolan ýazgylar dälde go içi kodlar we nädip website etmeli, nädip sistema gurmaly ýaly temalar hem bardyr.
-- Eger sizlere bu kitapça işiňize ýaramasa öz website <a href="https://go.dev/">golang</a> seredip otaýdan giňişleýin öwrenip bilersiňiz.
+Taslama peýdaly bolsa, GitHub-da ýyldyz berip we beýleki öwrenijiler bilen paýlaşyp bilersiň.
 
-Repony halaýan bolsaňyz, ony ýyldyz edip, has köp adama ýeter ýaly sosial media hasaplaryňyzda paýlaşyp bilersiňiz ⭐️
+## Go barada
 
+Go — Google-da döredilen, açyk çeşmeli, statiki görnüşli we kompýuter tarapyndan düzülýän programmirleme dilidir. Ol ýönekeý sintaksisi, çalt build prosesi, güýçli standart kitaphanasy we concurrency goldawy bilen tapawutlanýar.
 
+Go esasan backend hyzmatlary, CLI programmalary, ulgam gurallary, bulut infrastrukturalary we paýlanan ulgamlar üçin ulanylýar. Diliň resmi ady **Go**, `Golang` bolsa internetde gözleg etmekde we domen atlarynda giňden ulanylýan atdyr.
 
-## Go dili
-Go, Google tarapyndan 2007-nji ýyldan bäri işlenip düzülen açyk çeşme programmirleme dilidir. Ilkinji web sahypasynda golang.org domen ady bolansoň, oňa golang diýilýär, ýöne dogry ady Go. Esasan ulgam programmirlemek üçin düzülen we statiki görnüşli dil. 2009-njy ýylyň noýabr aýynda çykdy. Go compiler "gc", açyk çeşme (open-source) programma üpjünçiligi hökmünde Linux, OS X, Windows, BSD we Unix-iň käbir wersiýalary, şeýle hem 2015-nji ýyldan başlap smartfonlar üçin işlenip düzüldi.
+Resmi çeşmeler:
 
-## İçindäkiler
+- [Go resmi web sahypasy](https://go.dev/)
+- [Go dokumentasiýasy](https://go.dev/doc/)
+- [A Tour of Go](https://go.dev/tour/)
+- [Go Playground](https://go.dev/play/)
 
-- [Values](#values)
-- [Variables](#variables)
-- [Constants](#constants)
-- [For](#for)
-- [If-Else](#if-else)
-- [Switch](#switch)
-- [Arrays](#arrays)
-- [Slices](#slices)
-- [Maps](#maps)
-- [Range](#range)
-- [Functions](#functions)
-- [Variadic Functions](#variadic-functions)
-- [Closures](#closures)
-- [Recursion](#recursion)
-- [Pointers](#pointers)
-- [String Functions](#string-functions)
-- [Structs](#structs)
-- [Methods](#methods)
-- [Interfaces](#interfaces)
-- [Struct Embedding](#struct-embedding)
-- [Errors](#errors)
-- [Goroutines](#goroutines)
-- [Channel](#channel)
-- [Select](#select)
-- [Timeouts](#timeouts)
-- [Non-Blocking Channel](#non-blocking-channel)
-- [Closing Channels](#closing-channels)
-- [Range over Channels](#range-over-channels)
-- [Timers](#timers)
-- [Tickers](#tickers)
-- [Worker Pools](#worker-pools)
-- [Wait Groups](#wait-groups)
-- [Rate Limiting](#rate-limiting)
-- [Atomic Counters](#atomic-counters)
-- [Sorting](#sorting)
-- [Panic](#panic)
-- [Defer](#defer)
-- [Recover](#recover)
-- [Strings and Runes](#strings-and-runes)
-- [Text Templates](#text-templates)
-- [JSON](#json)
+## Esasy bölümler
 
+| Bölüm | Mazmuny |
+|---|---|
+| [Go temalary](go-temalary/README.md) | Go diliniň esasy düşünjeleri we kod mysallary |
+| [Goşmaça sapaklar](gosmaca-sapaklar/README.md) | Test, HTTP, SQL, Docker we ösen temalar |
+| [Interaktiw website](website/README.md) | Sapaklar, test, profil, Playground we sözlük |
+| [Go Cheatsheet](cheatsheet/README.md) | Sintaksisi çalt ýatlamak üçin gysga gollanma |
+| [Algoritmler](algoritmler/README.md) | Gözleg, sorting, maglumat gurluşlary, BFS we DFS |
+| [Design Patterns](design-patterns/README.md) | Go-da ulanylýan programma gurluş nusgalary |
+| [Go testi](go-temalary/testler/readme.md) | Esasy temalar boýunça bilim barlagy |
+| [Türkmençe Go sözlügi](website/sozluk.html) | Iňlisçe–türkmençe interaktiw termin sözlügi |
+| [Amaly taslamalar](amaly-taslamalar/README.md) | Doly işleýän Go taslamalary we testler |
+| [Kod ýumuşlary](kod-yumuslary/README.md) | Ýeňilden kynlaşýan programmirleme meseleleri |
+| [Çözgütler](cozgutler/README.md) | Ýumuşlaryň düşündirişli çözgütleri |
+| [Interview](interview/README.md) | Go iş söhbetdeşligi üçin taýýarlyk |
+| [Real-world Go](real-world-go/README.md) | Production taslamalarda ulanylýan usullar |
+| [Howpsuzlyk](howpsuzlyk/README.md) | Parol hash, JWT, CORS we SQL injection goragy |
+| [Performance](performance/README.md) | Benchmark, profiling we memory optimizasiýasy |
+| [DevOps](devops/README.md) | Docker, CI/CD, deploy we monitoring |
+| [Go gurallary](go-gurallary/README.md) | Format, analiz, profiling we debugger gurallary |
+| [Kitaphanalar](kitaphanalar/README.md) | Peýdaly standart we daşarky Go paketleri |
+| [Terminler](terminler/README.md) | Iňlisçe–türkmençe programmirleme sözlügi |
+| [Habarlar](habarlar/README.md) | Go wersiýalaryny we täzelikleri yzarlamak |
+| [Jemgyýet](jemgyyet/README.md) | Türkmen Go developerleri we taslamalary |
 
-## Aýratynlyklar
+## Go diliniň esaslary
 
-- [Go Programmirleme dili-Esaslary](Sapak/%231-Go.md)
-- [Go Programmirleme dili - Sintaksis(Syntax) we maglumatlaryň görnüşleri (data type)](Sapak/%232-Go.md)
-- [Go Programlama dili — Paketler](Sapak/%233-Go.md)
-- [Go Programlama dili — Arrays](Sapak/%234-Go.md)
+- [Go gurmak we ilkinji programma](gosmaca-sapaklar/getting-started/readme.md)
+- [Bahalar (Values)](go-temalary/values/readme.md)
+- [Üýtgeýjiler (Variables)](go-temalary/variables/readme.md)
+- [Hemişelikler (Constants)](go-temalary/constants/readme.md)
+- [For](go-temalary/for/readme.md)
+- [If–Else](go-temalary/if-else/readme.md)
+- [Switch](go-temalary/switch/readme.md)
+- [Massiwler (Arrays)](go-temalary/arrays/Readme.md)
+- [Dilimler (Slices)](go-temalary/slices/readme.md)
+- [Açar–baha toplumlary (Maps)](go-temalary/maps/readme.md)
+- [Range](go-temalary/range/readme.md)
+- [Funksiýalar](go-temalary/functions/readme.md)
+- [Üýtgeýän parametrli funksiýalar](go-temalary/variadic-functions/readme.md)
+- [Closure](go-temalary/closures/readme.md)
+- [Rekursiýa](go-temalary/recursion/readme.md)
+- [Pointer-ler](go-temalary/pointers/readme.md)
+- [Setir funksiýalary](go-temalary/string-functions/readme.md)
+- [Setirler we rune-lar](go-temalary/strings-and-runes/readme.md)
+- [Struct-lar](go-temalary/structs/readme.md)
+- [Method-lar](go-temalary/methods/readme.md)
+- [Interface-ler](go-temalary/interfaces/readme.md)
+- [Struct embedding](go-temalary/struct-embedding/readme.md)
+- [Generikler](gosmaca-sapaklar/generics/readme.md)
+- [Paketler we modullar](gosmaca-sapaklar/modules/readme.md)
 
+## Ýalňyşlyklar we maglumat bilen işlemek
 
-## Golang-işleri
+- [Ýalňyşlyklar (Errors)](go-temalary/errors/readme.md)
+- [Panic](go-temalary/panic/readme.md)
+- [Defer](go-temalary/defer/readme.md)
+- [Recover](go-temalary/recover/readme.md)
+- [Faýllary okamak we ýazmak](gosmaca-sapaklar/files/readme.md)
+- [JSON](go-temalary/json/readme.md)
+- [Tekst şablonlary](go-temalary/text-templates/readme.md)
+- [Tertiplemek (Sorting)](go-temalary/sorting/readme.md)
 
-- [Golangjob.yxz](https://golangjob.xyz/)
-- [Go / Golang Jobs & developers](https://www.golangprojects.com/)
-- [Golang Jobs](https://golang.cafe/)
-- [Golang Web3 Jobs](https://web3.career/golang-jobs)
+## Concurrency
+
+- [Goroutine-lar](go-temalary/goroutines/readme.md)
+- [Channel](go-temalary/channel/readme.md)
+- [Select](go-temalary/select/readme.md)
+- [Timeout](go-temalary/timeouts/readme.md)
+- [Bloklamaýan channel](go-temalary/non-blocking-channel/readme.md)
+- [Channel-y ýapmak](go-temalary/closing-channels/readme.md)
+- [Channel üstünde range](go-temalary/range-over-channels/readme.md)
+- [Timer](go-temalary/timers/readme.md)
+- [Ticker](go-temalary/tickers/readme.md)
+- [Worker pool](go-temalary/work-pools/readme.md)
+- [WaitGroup](go-temalary/wait-groups/readme.md)
+- [Rate limiting](go-temalary/rate-limiting/readme.md)
+- [Atomic counter](go-temalary/atomic-counters/readme.md)
+- [Context](gosmaca-sapaklar/context/readme.md)
+
+## Hakyky taslama taýýarlamak
+
+- [Kody formatlamak we barlamak](gosmaca-sapaklar/code-quality/readme.md)
+- [Test we benchmark](gosmaca-sapaklar/testing/readme.md)
+- [HTTP server we REST API](gosmaca-sapaklar/http-rest-api/readme.md)
+- [Middleware](gosmaca-sapaklar/middleware/readme.md)
+- [Maglumat bazasy bilen işlemek](gosmaca-sapaklar/database-sql/readme.md)
+- [Konfigurasiýa we environment variables](gosmaca-sapaklar/configuration/readme.md)
+- [Logging](gosmaca-sapaklar/logging/readme.md)
+- [Taslamanyň bukja gurluşy](gosmaca-sapaklar/project-structure/readme.md)
+- [Docker we deploy](gosmaca-sapaklar/docker-deployment/readme.md)
+
+## Öwreniş çeşmeleri
+
+- [Täze başlanlar üçin ýol kartasy](gosmaca-sapaklar/roadmap/readme.md)
+- [Go terminleriniň sözlügi](gosmaca-sapaklar/glossary/readme.md)
+- [Ýumuşlar](gosmaca-sapaklar/exercises/readme.md)
+- [Ýumuşlaryň nusgalyk çözgütleri](gosmaca-sapaklar/exercises/solutions.md)
+- [Köp duş gelýän ýalňyşlyklar](gosmaca-sapaklar/common-mistakes/readme.md)
+- [Söhbetdeşlik soraglary](gosmaca-sapaklar/interview-questions/readme.md)
+- [Amaly taslama pikirleri](gosmaca-sapaklar/practical-projects/readme.md)
+
+## Giňişleýin sapaklar
+
+- [Go programmirleme diliniň esaslary](Sapak/%231-Go.md)
+- [Sintaksis we maglumat görnüşleri](Sapak/%232-Go.md)
+- [Paketler](Sapak/%233-Go.md)
+- [Massiwler](Sapak/%234-Go.md)
+- [Dilimler](Sapak/%235-Go.md)
+
+## Go boýunça iş gözlemek
+
+- [Golang Projects](https://www.golangprojects.com/)
+- [Golang Cafe Jobs](https://golang.cafe/)
+- [Web3 Go Jobs](https://web3.career/golang-jobs)
+
+## Goşant goşmak
+
+Ýalňyşlyk tapsaň, täze tema ýa-da has gowy düşündiriş goşmak isleseň, issue açyp ýa-da pull request iberip bilersiň. Goşant goşanyňda:
+
+1. Düşnükli türkmençe ulan.
+2. Kod mysallaryny `gofmt` bilen formatla.
+3. Mümkin bolsa, koduň garaşylýan çykyşyny görkez.
+4. Täze sapagy degişli bölümden bagla.

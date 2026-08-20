@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="tk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Go programmirleme dili boýunça türkmençe interaktiw test">
+  <meta name="theme-color" content="#087f9d">
+  <title>Go Türkmençe — Test</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav" aria-label="Esasy menýu">
+      <a class="brand" href="./" aria-label="Baş sahypa">
+        <span class="brand-mark">Go</span>
+        <span>Türkmençe</span>
+      </a>
+      <div class="nav-actions">
+        <div class="desktop-menu">
+          <a href="#sapaklar">Sapaklar</a>
+          <a href="sozluk.html">Sözlük</a>
+          <a href="#playground">Playground</a>
+          <a href="#profil">Profil</a>
+          <a href="#yol-kartasy">Ýol kartasy</a>
+          <a href="#intro">Test</a>
+        </div>
+        <button id="install-button" class="install-button hidden" type="button">Programmany gur</button>
+        <button id="theme-button" class="theme-button" type="button" aria-label="Gara temany aç" title="Temany üýtget">◐</button>
+        <a class="nav-link" href="https://github.com/dayanchm/Go-turkmen" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+    </nav>
+
+    <div class="hero-layout">
+      <div class="hero-content">
+        <p class="eyebrow">Go / türkmençe</p>
+        <h1>Go öwren.<br><span class="accent-text">Özüňi barla.</span></h1>
+        <p class="hero-text">Esasy düşünjeler, gysga kod mysallary we 20 soragly test. Hemmesi bir ýerde.</p>
+        <div class="hero-actions">
+          <button id="start-button" class="primary-button" type="button">Testi başla <span>→</span></button>
+          <a class="secondary-link" href="#intro">Giňişleýin maglumat</a>
+        </div>
+        <div class="hero-stats" aria-label="Test barada maglumat">
+          <div><strong>20</strong><span>sorag</span></div>
+          <div><strong>4</strong><span>tema</span></div>
+          <div><strong id="study-streak">1</strong><span>gün yzygider</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="code-window">
+          <div class="window-bar">
+            <span></span><span></span><span></span>
+            <small>main.go</small>
+          </div>
+          <pre><code><span class="code-purple">package</span> main
+
+<span class="code-purple">import</span> <span class="code-green">"fmt"</span>
+
+<span class="code-purple">func</span> <span class="code-blue">main</span>() {
+    fmt.Println(<span class="code-green">"Salam, Go!"</span>)
+}</code></pre>
+          <div class="code-result"><span>$</span> go run main.go<br><strong>Salam, Go!</strong></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="sapaklar" class="lessons-section" aria-labelledby="lessons-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Gysgaça öwren</p>
+          <h2 id="lessons-title">Esasy Go düşünjeleri</h2>
+        </div>
+        <p>Testden öň esasy temalary gysga mysallar bilen gaýtala.</p>
+      </div>
+
+      <div class="lesson-tabs" role="tablist" aria-label="Go sapaklary">
+        <button class="lesson-tab active" type="button" role="tab" aria-selected="true" data-lesson="array">Array</button>
+        <button class="lesson-tab" type="button" role="tab" aria-selected="false" data-lesson="slice">Slice</button>
+        <button class="lesson-tab" type="button" role="tab" aria-selected="false" data-lesson="map">Map</button>
+        <button class="lesson-tab" type="button" role="tab" aria-selected="false" data-lesson="interface">Interface</button>
+        <button class="lesson-tab" type="button" role="tab" aria-selected="false" data-lesson="goroutine">Goroutine</button>
+        <button class="lesson-tab" type="button" role="tab" aria-selected="false" data-lesson="channel">Channel</button>
+      </div>
+
+      <article class="lesson-view">
+        <div class="lesson-copy">
+          <span id="lesson-number" class="lesson-number">01 / 06</span>
+          <h3 id="lesson-title">Array</h3>
+          <p id="lesson-description">Bir görnüşli we öňünden belli mukdardaky maglumatlary saklaýan gurluş.</p>
+          <div class="lesson-note"><strong>Ýatda sakla:</strong> <span id="lesson-note">Array-yň uzynlygy onuň görnüşiniň bir bölegidir.</span></div>
+        </div>
+        <pre class="lesson-code"><code id="lesson-code">numbers := [3]int{10, 20, 30}
+fmt.Println(numbers[0]) // 10</code></pre>
+      </article>
+      <div class="lesson-footer">
+        <button id="complete-lesson-button" class="outline-button" type="button">Sapagy tamamladym</button>
+        <span id="lesson-complete-status" class="lesson-complete-status"></span>
+      </div>
+      <article class="mini-test" aria-labelledby="mini-test-title">
+        <div>
+          <p class="eyebrow">Mini-test</p>
+          <h3 id="mini-test-title">Array-yň uzynlygy haçan kesgitlenýär?</h3>
+        </div>
+        <div id="mini-test-answers" class="mini-test-answers"></div>
+        <p id="mini-test-feedback" class="feedback hidden" role="status"></p>
+      </article>
+    </section>
+
+    <aside class="daily-tip" aria-labelledby="tip-title">
+      <div class="tip-symbol">//</div>
+      <div>
+        <p class="eyebrow">Günüň maslahaty</p>
+        <h2 id="tip-title">Go kody ýönekeý bolanda güýçlidir.</h2>
+        <p id="tip-text">Funksiýalary kiçi sakla we her funksiýa diňe bir işi tabşyr.</p>
+      </div>
+      <button id="new-tip-button" class="outline-button" type="button">Başga maslahat</button>
+    </aside>
+
+    <section id="playground" class="playground-section" aria-labelledby="playground-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Hakyky Go Playground</p>
+          <h2 id="playground-title">Kody ýaz we işlet</h2>
+        </div>
+        <p>Kod resmi Go Playground sandbox-ynda compile edilýär. Internet baglanyşygy gerek.</p>
+      </div>
+      <div class="editor-shell">
+        <div class="editor-toolbar">
+          <span>main.go</span>
+          <select id="code-example" aria-label="Kod mysalyny saýla">
+            <option value="hello">Salam dünýä</option>
+            <option value="slice">Slice</option>
+            <option value="goroutine">Goroutine</option>
+            <option value="interface">Interface</option>
+          </select>
+        </div>
+        <textarea id="code-editor" class="code-editor" spellcheck="false" aria-label="Go kod redaktory">package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Salam, Go!")
+}</textarea>
+        <div class="editor-actions">
+          <div>
+            <button id="run-code-button" class="primary-button" type="button">▶ Işlet</button>
+            <button id="share-code-button" class="outline-button" type="button">Playground-da paýlaş</button>
+          </div>
+          <span id="editor-status" role="status"></span>
+        </div>
+        <pre id="code-output" class="code-output" aria-live="polite"><code>Netije şu ýerde görkeziler.</code></pre>
+      </div>
+    </section>
+
+    <section id="profil" class="profile-section" aria-labelledby="profile-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Seniň ösüşiň</p>
+          <h2 id="profile-title">Profil</h2>
+        </div>
+        <p>Maglumatlar diňe şu brauzerde saklanýar. Hasaba durmak gerek däl.</p>
+      </div>
+      <div class="profile-grid">
+        <article><span>Tamamlanan sapak</span><strong id="profile-lessons">0 / 6</strong></article>
+        <article><span>Iň gowy test</span><strong id="profile-best">—</strong></article>
+        <article><span>Öwreniş yzygiderliligi</span><strong><span id="profile-streak">1</span> gün</strong></article>
+        <article><span>Açylan nyşan</span><strong id="profile-achievements">0 / 4</strong></article>
+      </div>
+      <div class="profile-progress">
+        <div><span>Umumy ösüş</span><strong id="profile-percent">0%</strong></div>
+        <div class="progress-track"><div id="profile-progress-bar" class="progress-bar"></div></div>
+      </div>
+      <div id="profile-lesson-list" class="profile-lesson-list"></div>
+    </section>
+
+    <section id="intro" class="intro" aria-labelledby="intro-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Test barada</p>
+          <h2 id="intro-title">20 sorag. Takyk netije.</h2>
+        </div>
+        <p>Hasaba durmak gerek däl. Testi başla, jogap ber we netijäňi şol wagt gör.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-number">01</span>
+          <h3>Jogaby saýla</h3>
+          <p>Her sorag üçin dört wariantdan birini belle.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-number">02</span>
+          <h3>Netijäni gör</h3>
+          <p>Dogry we nädogry jogaplaryň awtomatik hasaplanar.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-number">03</span>
+          <h3>Gaýtadan öwren</h3>
+          <p>Her soragyň düşündirişini okap, bilimiňi berkit.</p>
+        </article>
+      </div>
+      <div class="quiz-settings" aria-labelledby="settings-title">
+        <div>
+          <p class="eyebrow">Test sazlamasy</p>
+          <h3 id="settings-title">Nähili test isleýärsiň?</h3>
+        </div>
+        <label>Sorag sany
+          <select id="question-count">
+            <option value="10">10 sorag</option>
+            <option value="20" selected>20 sorag</option>
+          </select>
+        </label>
+        <label class="check-label"><input id="shuffle-questions" type="checkbox" checked> Soraglary garyşdyr</label>
+        <div class="best-score"><span>Iň gowy netije</span><strong id="best-score">—</strong></div>
+      </div>
+    </section>
+
+    <section id="yol-kartasy" class="roadmap-section" aria-labelledby="roadmap-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Nireden başlamaly?</p>
+          <h2 id="roadmap-title">Go öwreniş ýol kartasy</h2>
+        </div>
+        <p>Ädimleri tertip boýunça geç we her tapgyrdan soň kiçi taslama taýýarla.</p>
+      </div>
+      <div class="roadmap-list">
+        <article class="roadmap-item"><span>1</span><div><h3>Esaslar</h3><p>Üýtgeýji, şert, loop, array, slice we map.</p></div><small>Başlangyç</small></article>
+        <article class="roadmap-item"><span>2</span><div><h3>Kody guramak</h3><p>Funksiýa, struct, method, interface we paket.</p></div><small>Orta</small></article>
+        <article class="roadmap-item"><span>3</span><div><h3>Concurrency</h3><p>Goroutine, channel, select we context.</p></div><small>Ösen</small></article>
+        <article class="roadmap-item"><span>4</span><div><h3>Hakyky taslama</h3><p>REST API, maglumat bazasy, test we Docker.</p></div><small>Amaly</small></article>
+      </div>
+    </section>
+
+    <section id="quiz" class="quiz-section hidden" aria-labelledby="quiz-title">
+      <div class="quiz-topline">
+        <div>
+          <p id="category" class="eyebrow">Başlangyç</p>
+          <h2 id="quiz-title">Go testi</h2>
+        </div>
+        <div class="quiz-meta">
+          <p id="timer" class="timer">00:00</p>
+          <p class="counter"><span id="current-number">1</span> / <span id="total-number">20</span></p>
+        </div>
+      </div>
+
+      <div class="progress-track" aria-hidden="true">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+
+      <article class="question-card">
+        <pre id="code-block" class="code-block hidden"><code id="code-text"></code></pre>
+        <h3 id="question-text"></h3>
+        <div id="answers" class="answers" role="radiogroup" aria-label="Jogap wariantlary"></div>
+        <p id="feedback" class="feedback hidden" role="status"></p>
+        <div class="quiz-actions">
+          <span class="keyboard-hint">1–4: jogap · Enter: dowam et</span>
+          <button id="next-button" class="primary-button" type="button" disabled>Indiki sorag</button>
+        </div>
+      </article>
+    </section>
+
+    <section id="result" class="result-section hidden" aria-labelledby="result-title">
+      <div class="result-card">
+        <p class="eyebrow">Test tamamlandy</p>
+        <div id="score-ring" class="score-ring">
+          <strong id="score-percent">0%</strong>
+        </div>
+        <h2 id="result-title">Netijäň</h2>
+        <p id="score-text" class="score-text"></p>
+        <p id="result-message" class="result-message"></p>
+        <div id="achievement" class="achievement hidden">
+          <span id="achievement-mark">GO</span>
+          <div><small>Täze nyşan açyldy</small><strong id="achievement-title"></strong></div>
+        </div>
+        <div class="result-actions">
+          <button id="restart-button" class="primary-button" type="button">Täzeden başla</button>
+          <button id="retry-wrong-button" class="outline-button hidden" type="button">Nädogry jogaplary çöz</button>
+          <button id="share-button" class="outline-button" type="button">Netijäni paýlaş</button>
+        </div>
+        <p id="share-status" class="share-status hidden" role="status"></p>
+      </div>
+      <div id="review" class="review"></div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="./"><span class="brand-mark">Go</span><span>Türkmençe</span></a>
+    <p>Go öwrenýän türkmenler üçin açyk çeşmeli taslama.</p>
+    <p class="footer-year">© <span id="current-year"></span></p>
+  </footer>
+
+  <button id="command-button" class="command-button" type="button" aria-label="Çalt menýuny aç">
+    <span>Çalt menýu</span><kbd>⌘ K</kbd>
+  </button>
+
+  <dialog id="command-dialog" class="command-dialog">
+    <div class="command-head">
+      <span aria-hidden="true">⌕</span>
+      <input id="command-search" type="search" placeholder="Sapak ýa-da bölüm gözle..." autocomplete="off" aria-label="Gözleg">
+      <button id="command-close" type="button" aria-label="Menýuny ýap">Esc</button>
+    </div>
+    <div id="command-results" class="command-results">
+      <button type="button" data-command="lesson:array"><span>Array sapagy</span><small>Sapak</small></button>
+      <button type="button" data-command="lesson:slice"><span>Slice sapagy</span><small>Sapak</small></button>
+      <button type="button" data-command="lesson:map"><span>Map sapagy</span><small>Sapak</small></button>
+      <button type="button" data-command="lesson:interface"><span>Interface sapagy</span><small>Sapak</small></button>
+      <button type="button" data-command="lesson:goroutine"><span>Goroutine sapagy</span><small>Sapak</small></button>
+      <button type="button" data-command="lesson:channel"><span>Channel sapagy</span><small>Sapak</small></button>
+      <button type="button" data-command="section:yol-kartasy"><span>Öwreniş ýol kartasy</span><small>Bölüm</small></button>
+      <button type="button" data-command="section:playground"><span>Go kod redaktory</span><small>Playground</small></button>
+      <button type="button" data-command="section:profil"><span>Seniň ösüş profiliň</span><small>Profil</small></button>
+      <button type="button" data-command="dictionary"><span>Iňlisçe–türkmençe sözlük</span><small>Sözlük</small></button>
+      <button type="button" data-command="test"><span>Testi başla</span><small>Hereket</small></button>
+      <p id="command-empty" class="command-empty hidden">Netije tapylmady.</p>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
