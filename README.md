@@ -9,6 +9,8 @@ Bu repozitoriýa Go diline täze başlanlar we bilimini ösdürmek isleýänler 
 
 **Website:** [go.dayanch.dev](https://go.dayanch.dev/)
 
+[![Go türkmençe website-iň baş sahypasy](assets/go-dayanch-dev.png)](https://go.dayanch.dev/)
+
 Taslama peýdaly bolsa, GitHub-da ýyldyz berip we beýleki öwrenijiler bilen paýlaşyp bilersiň.
 
 ## Go barada
