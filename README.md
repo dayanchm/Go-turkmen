@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://go.dev/images/gophers/ladder.svg" alt="Go gopherleri" width="420">
+  <img src="https://go.dev/images/gophers/ladder.svg" alt="Go gopherleri" width="100" height="100">
 
   <h1>Go türkmençe</h1>
   <p>Go programmirleme dilini türkmençe öwrenmek üçin açyk çeşmeli okuw çeşmesi.</p>
