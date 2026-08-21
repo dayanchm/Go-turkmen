@@ -1,4 +1,4 @@
-const CACHE_NAME = "go-turkmen-v4";
+const CACHE_NAME = "go-turkmen-v5";
 const APP_FILES = [
   "./",
   "./index.html",

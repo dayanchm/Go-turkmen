@@ -293,6 +293,14 @@ const elements = {
   profilePercent: document.querySelector("#profile-percent"),
   profileProgress: document.querySelector("#profile-progress-bar"),
   profileLessonList: document.querySelector("#profile-lesson-list"),
+  roadmapChecks: [...document.querySelectorAll("[data-roadmap-topic]")],
+  roadmapCards: [...document.querySelectorAll("[data-roadmap-stage]")],
+  roadmapPercent: document.querySelector("#roadmap-percent"),
+  roadmapProgress: document.querySelector("#roadmap-progress-bar"),
+  roadmapCompleted: document.querySelector("#roadmap-completed"),
+  roadmapTotal: document.querySelector("#roadmap-total"),
+  roadmapStage: document.querySelector("#roadmap-stage"),
+  roadmapReset: document.querySelector("#roadmap-reset"),
   tipTitle: document.querySelector("#tip-title"),
   tipText: document.querySelector("#tip-text"),
   newTip: document.querySelector("#new-tip-button"),
@@ -756,6 +764,63 @@ function nextTip() {
   showTip(currentTip);
 }
 
+function getRoadmapProgress() {
+  try {
+    const saved = JSON.parse(localStorage.getItem("go-roadmap-progress") || "[]");
+    return Array.isArray(saved) ? saved : [];
+  } catch (error) {
+    return [];
+  }
+}
+
+function renderRoadmap() {
+  const completed = getRoadmapProgress();
+  const total = elements.roadmapChecks.length;
+  const percent = Math.round((completed.length / total) * 100);
+
+  elements.roadmapChecks.forEach((input) => {
+    input.checked = completed.includes(input.dataset.roadmapTopic);
+  });
+
+  let currentStage = elements.roadmapCards.length;
+  let foundCurrent = false;
+  elements.roadmapCards.forEach((card, index) => {
+    const checks = [...card.querySelectorAll("[data-roadmap-topic]")];
+    const stageComplete = checks.every((input) => completed.includes(input.dataset.roadmapTopic));
+    const isCurrent = !foundCurrent && !stageComplete;
+    if (isCurrent) {
+      currentStage = index + 1;
+      foundCurrent = true;
+    }
+    card.classList.toggle("complete", stageComplete);
+    card.classList.toggle("current", isCurrent);
+    const status = card.querySelector(".roadmap-status");
+    status.textContent = stageComplete ? "Tamamlandy ✓" : isCurrent ? "Häzirki tapgyr" : "Garaşýar";
+  });
+
+  elements.roadmapPercent.textContent = `${percent}%`;
+  elements.roadmapProgress.style.width = `${percent}%`;
+  elements.roadmapCompleted.textContent = completed.length;
+  elements.roadmapTotal.textContent = total;
+  elements.roadmapStage.textContent = percent === 100 ? "✓" : String(currentStage).padStart(2, "0");
+  elements.roadmapReset.hidden = completed.length === 0;
+}
+
+function updateRoadmap(event) {
+  const completed = new Set(getRoadmapProgress());
+  const topic = event.target.dataset.roadmapTopic;
+  if (event.target.checked) completed.add(topic);
+  else completed.delete(topic);
+  localStorage.setItem("go-roadmap-progress", JSON.stringify([...completed]));
+  renderRoadmap();
+}
+
+function resetRoadmap() {
+  if (!window.confirm("Ýol kartasyndaky ähli ösüşiňi arassalamalymy?")) return;
+  localStorage.removeItem("go-roadmap-progress");
+  renderRoadmap();
+}
+
 function toggleTheme() {
   const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
   localStorage.setItem("go-test-theme", nextTheme);
@@ -788,6 +853,7 @@ const storedBest = localStorage.getItem("go-test-best");
 elements.bestScore.textContent = storedBest ? `${storedBest}%` : "—";
 showLesson("array");
 renderProfile();
+renderRoadmap();
 document.querySelector("#current-year").textContent = new Date().getFullYear();
 
 elements.start.addEventListener("click", startQuiz);
@@ -799,6 +865,8 @@ elements.theme.addEventListener("click", toggleTheme);
 elements.newTip.addEventListener("click", nextTip);
 elements.lessonTabs.forEach((tab) => tab.addEventListener("click", () => showLesson(tab.dataset.lesson)));
 elements.completeLesson.addEventListener("click", completeCurrentLesson);
+elements.roadmapChecks.forEach((input) => input.addEventListener("change", updateRoadmap));
+elements.roadmapReset.addEventListener("click", resetRoadmap);
 elements.runCode.addEventListener("click", runGoCode);
 elements.shareCode.addEventListener("click", shareGoCode);
 elements.codeExample.addEventListener("change", (event) => {

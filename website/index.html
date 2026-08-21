@@ -226,19 +226,95 @@ func main() {
     </section>
 
     <section id="yol-kartasy" class="roadmap-section" aria-labelledby="roadmap-title">
-      <div class="section-heading">
+      <div class="roadmap-heading">
         <div>
-          <p class="eyebrow">Nireden başlamaly?</p>
-          <h2 id="roadmap-title">Go öwreniş ýol kartasy</h2>
+          <p class="eyebrow">2026 · ädimme-ädim</p>
+          <h2 id="roadmap-title">Başlangyçdan işe taýýar Go developer-e çenli.</h2>
         </div>
-        <p>Ädimleri tertip boýunça geç we her tapgyrdan soň kiçi taslama taýýarla.</p>
+        <p>Temany öwren, ýerine ýetiren işiňi belle we ýol kartasy seniň indiki ädimiňi görkezer. Ösüş diňe öz brauzeriňde saklanýar.</p>
       </div>
-      <div class="roadmap-list">
-        <article class="roadmap-item"><span>1</span><div><h3>Esaslar</h3><p>Üýtgeýji, şert, loop, array, slice we map.</p></div><small>Başlangyç</small></article>
-        <article class="roadmap-item"><span>2</span><div><h3>Kody guramak</h3><p>Funksiýa, struct, method, interface we paket.</p></div><small>Orta</small></article>
-        <article class="roadmap-item"><span>3</span><div><h3>Concurrency</h3><p>Goroutine, channel, select we context.</p></div><small>Ösen</small></article>
-        <article class="roadmap-item"><span>4</span><div><h3>Hakyky taslama</h3><p>REST API, maglumat bazasy, test we Docker.</p></div><small>Amaly</small></article>
+
+      <div class="roadmap-dashboard" aria-label="Ýol kartasyndaky ösüşiň">
+        <div class="roadmap-progress-copy">
+          <span>Umumy ösüş</span>
+          <strong id="roadmap-percent">0%</strong>
+        </div>
+        <div class="roadmap-progress-track" aria-hidden="true"><div id="roadmap-progress-bar"></div></div>
+        <div class="roadmap-metrics">
+          <p><strong id="roadmap-completed">0</strong><span>tamamlanan tema</span></p>
+          <p><strong id="roadmap-total">25</strong><span>jemi tema</span></p>
+          <p><strong id="roadmap-stage">01</strong><span>häzirki tapgyr</span></p>
+        </div>
+        <button id="roadmap-reset" class="roadmap-reset" type="button">Ösüşi arassala</button>
       </div>
+
+      <div id="roadmap-list" class="roadmap-list">
+        <article class="roadmap-card" data-roadmap-stage="1">
+          <header><span class="roadmap-step">01</span><div><p>2–3 hepde · Başlangyç</p><h3>Go esaslary</h3></div><span class="roadmap-status">Indiki ädim</span></header>
+          <p class="roadmap-description">Diliň sintaksisine düşün we özbaşdak kiçi CLI programma ýaz.</p>
+          <div class="roadmap-topics">
+            <label><input type="checkbox" data-roadmap-topic="values"><span>Values we görnüşler</span></label>
+            <label><input type="checkbox" data-roadmap-topic="variables"><span>Variables we constants</span></label>
+            <label><input type="checkbox" data-roadmap-topic="control"><span>if, switch we for</span></label>
+            <label><input type="checkbox" data-roadmap-topic="collections"><span>Array, slice we map</span></label>
+            <label><input type="checkbox" data-roadmap-topic="cli"><span>Mini taslama: CLI kalkulýator</span></label>
+          </div>
+        </article>
+
+        <article class="roadmap-card" data-roadmap-stage="2">
+          <header><span class="roadmap-step">02</span><div><p>3–4 hepde · Esasy</p><h3>Arassa kod gurluşy</h3></div><span class="roadmap-status">Garaşýar</span></header>
+          <p class="roadmap-description">Kody kiçi böleklere böl, gaýtadan ulanylýan paketleri we görnüşleri gur.</p>
+          <div class="roadmap-topics">
+            <label><input type="checkbox" data-roadmap-topic="functions"><span>Functions we closures</span></label>
+            <label><input type="checkbox" data-roadmap-topic="structs"><span>Struct, method we pointer</span></label>
+            <label><input type="checkbox" data-roadmap-topic="interfaces"><span>Interface we composition</span></label>
+            <label><input type="checkbox" data-roadmap-topic="packages"><span>Package, module we generics</span></label>
+            <label><input type="checkbox" data-roadmap-topic="todo-cli"><span>Mini taslama: Todo CLI</span></label>
+          </div>
+        </article>
+
+        <article class="roadmap-card" data-roadmap-stage="3">
+          <header><span class="roadmap-step">03</span><div><p>3–4 hepde · Orta</p><h3>Ygtybarly programma</h3></div><span class="roadmap-status">Garaşýar</span></header>
+          <p class="roadmap-description">Ýalňyşlyklary dolandyr, kody test et we programmanyň ýagdaýyny synla.</p>
+          <div class="roadmap-topics">
+            <label><input type="checkbox" data-roadmap-topic="errors"><span>Error handling</span></label>
+            <label><input type="checkbox" data-roadmap-topic="files-json"><span>Files we JSON</span></label>
+            <label><input type="checkbox" data-roadmap-topic="testing"><span>Testing we benchmark</span></label>
+            <label><input type="checkbox" data-roadmap-topic="logging"><span>Logging, config we context</span></label>
+            <label><input type="checkbox" data-roadmap-topic="url-checker"><span>Mini taslama: URL checker</span></label>
+          </div>
+        </article>
+
+        <article class="roadmap-card" data-roadmap-stage="4">
+          <header><span class="roadmap-step">04</span><div><p>3 hepde · Ösen</p><h3>Concurrency</h3></div><span class="roadmap-status">Garaşýar</span></header>
+          <p class="roadmap-description">Bir wagtda birnäçe işi howpsuz we gözegçilikli işletmegi öwren.</p>
+          <div class="roadmap-topics">
+            <label><input type="checkbox" data-roadmap-topic="goroutines"><span>Goroutine we WaitGroup</span></label>
+            <label><input type="checkbox" data-roadmap-topic="channels"><span>Channel we select</span></label>
+            <label><input type="checkbox" data-roadmap-topic="sync"><span>Mutex, atomic we race detector</span></label>
+            <label><input type="checkbox" data-roadmap-topic="workers"><span>Worker pool we timeout</span></label>
+            <label><input type="checkbox" data-roadmap-topic="downloader"><span>Mini taslama: parallel downloader</span></label>
+          </div>
+        </article>
+
+        <article class="roadmap-card" data-roadmap-stage="5">
+          <header><span class="roadmap-step">05</span><div><p>4–6 hepde · Amaly</p><h3>Production backend</h3></div><span class="roadmap-status">Garaşýar</span></header>
+          <p class="roadmap-description">Hakyky API-ni gur, howpsuzlandyr, konteýnere sal we internete çykar.</p>
+          <div class="roadmap-topics">
+            <label><input type="checkbox" data-roadmap-topic="http"><span>HTTP, REST we middleware</span></label>
+            <label><input type="checkbox" data-roadmap-topic="database"><span>SQL we maglumat bazasy</span></label>
+            <label><input type="checkbox" data-roadmap-topic="security"><span>JWT we howpsuzlyk</span></label>
+            <label><input type="checkbox" data-roadmap-topic="devops"><span>Docker, CI/CD we monitoring</span></label>
+            <label><input type="checkbox" data-roadmap-topic="production-api"><span>Final taslama: production API</span></label>
+          </div>
+        </article>
+      </div>
+
+      <aside class="roadmap-finish">
+        <span aria-hidden="true">↗</span>
+        <div><p class="eyebrow">Netije</p><h3>Portfolio üçin 5 sany işleýän taslama</h3><p>Her tapgyryň soňundaky taslamany GitHub-a ýerleşdir. Diňe okalan tema däl, ýazylan kod seni işe taýýarlaýar.</p></div>
+        <a class="outline-button" href="https://github.com/dayanchm/Go-turkmen/tree/main/amaly-taslamalar" target="_blank" rel="noreferrer">Taslamalara seret</a>
+      </aside>
     </section>
 
     <section id="quiz" class="quiz-section hidden" aria-labelledby="quiz-title">
