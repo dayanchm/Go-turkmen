@@ -1,0 +1,72 @@
+name: Go CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Check Go examples
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: stable
+
+      - name: Check formatting
+        shell: bash
+        run: |
+          files=$(find . -type f -name '*.go' -not -path './.git/*')
+
+          if [ -z "$files" ]; then
+            echo "No Go files found."
+            exit 0
+          fi
+
+          unformatted=$(gofmt -l $files)
+
+          if [ -n "$unformatted" ]; then
+            echo "The following files are not formatted:"
+            echo "$unformatted"
+            exit 1
+          fi
+
+          echo "All Go files are formatted correctly."
+
+      - name: Test Go modules
+        shell: bash
+        run: |
+          modules=$(find . -type f -name 'go.mod' -not -path './.git/*')
+
+          if [ -z "$modules" ]; then
+            echo "No Go modules found."
+            exit 0
+          fi
+
+          while IFS= read -r mod; do
+            dir=$(dirname "$mod")
+
+            echo ""
+            echo "========================================"
+            echo "Testing: $dir"
+            echo "========================================"
+
+            (
+              cd "$dir"
+              go vet ./...
+              go test ./...
+              go build ./...
+            )
+          done <<< "$modules"
